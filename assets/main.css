@@ -1,0 +1,70 @@
+/* ================ rules */
+@font-face {
+    font-family: "tabsFont";
+    src: url("OCR A Std.ttf");
+}
+
+body {
+	margin: 0;
+}
+
+/* ================ main classes */
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 9fr;
+	grid-template-rows: 100vh;
+}
+.wrapper-style {
+	font-family: Cambria;
+	/*font-family: Calibri;*/
+	/*font-family: Arial, Helvetica, Times, monospace;*/
+
+	margin: 0px;
+	padding: 50px;
+}
+.bg-glow {
+	background-color: #EBF7E3;
+}
+.bg-glow-md {
+	background-color: #9BD770;
+}
+.bg-glow-gloom {
+	background-color: #66B032;
+}
+.bg-gloom-md {
+	background-color: #375F1B;
+}
+.bg-gloom {
+	background-color: #1B3409;
+}
+
+/* ================ minor classes */
+.tabs {
+/*	display: flex;
+	flex-direction: column;*/
+	
+}
+.tab {
+	font-family: "tabsFont", monospace;
+	text-align: center;			/* align horizontal if wraps */
+	display: flex;
+	justify-content: center; 	/* align horizontal */
+	align-items: center; 		/* align vertical */
+
+/*	width: 200px;*/
+	height: 100px;
+	/*max-height: 100px;*/
+
+	margin-top: 0;
+	margin-bottom: 0;
+	/*margin: 0 auto 0 auto;*/
+	/*border: 1px solid black;*/
+	/*border-radius: 5px;*/
+}
+.tab:hover {
+/*	text-decoration: underline;*/
+	font-weight: bold;
+	color: #EBF7E3;
+	background-color: #66B032;
+	border-right: 5px solid #375F1B;
+}
