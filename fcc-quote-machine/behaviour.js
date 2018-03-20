@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	$("#run").click(fetchQt);
+
 });
 
 var fetchQt = function(){
@@ -62,7 +63,29 @@ function quoteLoaded(newQuote, quoteDiv) {
     }
 
     window.scrollTo(0, window.outerHeight);
+
+    setHrefTweetQuoteButton();
+
  }
+
+
+ var setHrefTweetQuoteButton = function(){
+ 	// quote is a previously generated paragraph
+ 	let lastParIndex = 2*qtFinal.length;
+ 	let text = $("#quote_placeholder").find("p")[lastParIndex].innerText;
+ 	let author = $("#theme").val();
+ 		text += (" - " + author);
+ 		console.log(text);
+
+ 	let base = "https://twitter.com/intent/tweet?text=";
+
+ 	let buttonHref = base+text;
+ 		console.log(buttonHref);
+
+ 	$(document).find("a")[0].attributes.href.value = buttonHref;
+
+}
+
 
  /***************************
 	!!! Wow TODO so much, doge busy:
@@ -70,6 +93,7 @@ function quoteLoaded(newQuote, quoteDiv) {
 	! - fix weird holes in quotes
 	! - fix repeated quotes behaviour so user does not see that anything went unexpected
 	! - fix fade-in animation so only the last <p> fades in
+	! - fix twitter button
 
 	but quite nice nontheless
 	
