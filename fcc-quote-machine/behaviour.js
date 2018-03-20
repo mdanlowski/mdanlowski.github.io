@@ -46,7 +46,7 @@ function quoteLoaded(newQuote, quoteDiv) {
       	if (qtFinal.indexOf('<p style="display:none;">' + result.quote + '<hr style="border: 1px solid peru"/></p>') >= 0){
       		console.log('random quote has been repeated');
       		fetchQt();
-      		// return;
+      		return;
       		// $('#quote_placeholder').append(qtFinal);
       	}
       	// NO REPEAT - ALL GOOD
