@@ -1,0 +1,77 @@
+/*{bootstrap included}*/
+body {
+  background: peru;
+  
+}
+
+header {
+    font-family: "Monotype Corsiva", monospace;
+    height: 100vh;
+    background-image: url(best-books-book-youll-ever-read.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*align-items: left;*/
+    /*text-align: center;*/
+}
+
+h2 {
+	font-weight: bold; 
+	color: brown;
+}
+
+.row {
+  margin: 0px;
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: row;
+  padding-left: 50px;
+  /*font-size: 200%;*/
+  background-color: black;
+  opacity: 0.7;
+  /*color: black;*/
+}
+
+.subjumbo {
+	font-weight: bold; 
+	color: white;
+  	display: flex;
+  	flex-direction: column;
+}
+
+.img-gears {
+  float: right;
+  height: 200px;
+  width: auto;
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+h1, h2 {
+  text-align: left;
+}
+
+.contentino {
+  max-width: 800px;
+  text-align: justify;
+  
+}
+
+#theme {
+	width: 80%;
+}
+
+#run {
+	width: 20%;
+}
+
+#quote_placeholder {
+	width: 100%;
+	text-align: center;
+	font-style: italic;
+}
