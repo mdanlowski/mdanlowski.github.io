@@ -1,43 +1,38 @@
-<!DOCTYPE html>
 <html>
-
 <head>
-	<title>Martin's Space</title>
-	<meta charset="Unicode"/>
-	<link rel="stylesheet" type="text/css" href="assets/main.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<meta charset="UTF-8">
+	<script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+	<!-- uncomment lines below to include extra p5 libraries -->
+	<!--<script language="javascript" src="libraries/p5.dom.js"></script>-->
+	<!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
+	<script language="javascript" type="text/javascript" src="GameObject.js"></script>
+	<script language="javascript" type="text/javascript" src="Projectile.js"></script>
+	<script language="javascript" type="text/javascript" src="Player.js"></script>
+	<script language="javascript" type="text/javascript" src="sketch.js"></script>
+	<!-- this line removes any default padding and style. you might only need one of these values set. -->
+	<style>
+		body {padding: 0; margin: 0;} 
+		#link {
+			width: 600px;
+			padding: 0; margin: 0;
+			background-color: rgb(0, 250, 100);
+			text-align: center;
+		}
+		a {
+			text-decoration: none;
+			color: black;
+		}
+	</style>
 </head>
 
 <body>
-
-	<div class="wrapper">
-		<div class="tabs bg-glow-md">
-			<div class="navi">
-				<p class="tab">about me</p>
-				<p class="tab">programming projects</p>
-				<p class="tab">mechatronic projects</p>
-				<p class="tab">misc</p>
-				<p class="tab">contact</p>
-				<p class="tab">buy catnip</p>	
-			</div>
-		</div>
-
-		<div class="wrapper-style bg-glow">
-			<h1>Hello World!</h1>
-
-			<div class="container">
-				<p><strong>view optimized for minimum 1380x780 (for now)</strong></p>
-				<div id="test"></div>
-
-
-			</div>
-		</div>
+	<script type="text/javascript">
+		function goToCode(){
+			window.open("https://github.com/mdanlowski/mdanlowski.github.io/tree/master/shooter");
+		}
+	</script>
+	<div id="link">
+		<a href="javascript:goToCode();">click here to see my code!</a>
 	</div>
-	<div class="bottom bg-glow">
-			<!-- <p>ayy lmao</p> -->
-	</div>
-
 </body>
-<script src="assets/script.js"></script>
 </html>
-
