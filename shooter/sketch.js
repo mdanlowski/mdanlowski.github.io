@@ -74,7 +74,7 @@ function debugInfo(plr_){
 	text(Object.values(gun)[0], 10, 70);
 
 	if(projectiles.length){
-		text("last prctl. heading: " + Object.values(projectiles[projectiles.length-1].heading), 10, 45);
+		text("last particle heading: " + Object.values(projectiles[projectiles.length-1].heading), 10, 45);
 	}
 
 	switch(keyCode_){
@@ -95,5 +95,6 @@ function debugInfo(plr_){
 	text("plr pos: " + plr_.xpos  + ", " + plr_.ypos, 10, 20);
 
 	textSize(15);
+	fill('red');
 	text("WASD - move; 1,2 - guns", 10, 590);
 }
