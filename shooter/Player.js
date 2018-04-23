@@ -16,6 +16,13 @@ function Player(initX, initY, hp_, ammo_, color_){
 
 	}
 
+	this.drawStats = function(){
+		fill('red');
+		noStroke();
+		rect(this.xpos - 25, this.ypos + 20, 0.5 * this.hp, 4);
+		stroke(1);
+	}
+
 
 	this.calcPos = function(){
 		if (keyIsDown(65)) {
@@ -33,6 +40,9 @@ function Player(initX, initY, hp_, ammo_, color_){
 
 	}
 
+	this.collisions = function( obj ){
+
+	}
 
 }
 

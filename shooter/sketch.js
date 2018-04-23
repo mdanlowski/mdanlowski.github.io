@@ -17,35 +17,49 @@ var gun2 = {
 var gun = gun1;
 
 var projectiles = [];
+var hostiles = [new Enemy(300, 100, [300, 300], 2, 50, 10, 'red') ];
 
-// ======================   SETUP
+// ============================================   SETUP
 function setup() {
 	createCanvas(600, 600);
 	textSize(20);
 	var initialFrameCount = frameCount;
 }
-// ======================   DRAW
+// ============================================   END-SETUP
+// ============================================   DRAW
 function draw() {
 	background(0, 250, 100);
 
 	plr.calcPos();
 	plr.redraw();
+	plr.drawStats();
 
 	for(let obj of projectiles){
 		obj.calcPos();
 		obj.redraw();
+		obj.edges(obj, projectiles, height, width);
+	}
+	for(let obj of hostiles){
+		obj.calcPos();
+		obj.redraw();
+		for(let subobj of projectiles){
+			obj.collisions(subobj);
+		}
 	}
 
-	if(mouseIsPressed){
+	if(mouseIsPressed && mouseButton === LEFT){
 		if(frameCount - initialFrameCount > 5){
 			projectiles.push(new Projectile(plr, [mouseX, mouseY], gun));
 			initialFrameCount = frameCount;
 		}
 	}
+	if(mouseIsPressed && mouseButton === CENTER){
+		hostiles.push(new Enemy(mouseX, mouseY, [mouseX, mouseY], 5, 50, 10, 'red') );
+	}
 
 	debugInfo(plr);
 }
-// ======================   END-DRAW
+// ============================================   END-DRAW
 
 function keyPressed() {
 	if (keyCode === 49){
@@ -57,8 +71,10 @@ function keyPressed() {
 }
 
 function mousePressed() {
-	initialFrameCount = frameCount;
-	projectiles.push(new Projectile(plr, [mouseX, mouseY], gun));
+	if (mouseButton === LEFT){
+		initialFrameCount = frameCount;
+		projectiles.push(new Projectile(plr, [mouseX, mouseY], gun));
+	}
 }
 
 function debugInfo(plr_){
@@ -67,9 +83,11 @@ function debugInfo(plr_){
 	fill(255);
 	strokeWeight(1);
 
-	line(plr_.xpos, plr_.ypos, mouseX, mouseY);
+	// line connecting plr & mouse
+	// line(plr_.xpos, plr_.ypos, mouseX, mouseY);
 
 	text(keyCode_, 10, 100);
+	text(projectiles.length, 550, 20);
 
 	text(Object.values(gun)[0], 10, 70);
 

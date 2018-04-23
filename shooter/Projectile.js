@@ -17,6 +17,16 @@ function Projectile(origin_, heading_, weapon_){
 
 	}
 
+	this.edges = function( _self_, projctlArr, worldH, worldW ){
+		if (this.xpos < 0 || this.xpos > worldW || this.ypos < 0 || this.ypos > worldH){
+			let remIndx = projctlArr.indexOf(_self_);
+			// display len of the projectle array that holds prctls
+			// currently within the edges of the world (map)
+			// console.log(projctlArr.length);
+			projctlArr.splice(remIndx, 1);
+		}
+	}
+
 	this.redraw = function(){
 		switch(weapon_.projType){
 			case "bullet":
