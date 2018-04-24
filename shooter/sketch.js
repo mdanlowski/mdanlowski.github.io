@@ -1,23 +1,69 @@
 // Prototype project I :: Shooter game
 // import { Player } from "Player";
 
+/**********************************************************
+*	sketch.js - main game animation loop
+***********************************************************	
+*	designed in OO fashion
+*	- one instance of Player Object				: plr
+*	- an array holding all active hostiles		: hostiles[]
+*		- inactive hostiles (killed) are moved outside the world and removed from the array
+*		  to be destroyed by the JS GC
+*	- an array holding all shot out projectiles	: projectiles[]
+*		- projectiles that hit any object (enemy, wall, etc.) are moved outside the world
+*			- p. that fly outside the world are moved to (-100,-100) and are removed from
+*			  the array to be destroyed by JS GC
+*	- an object holding weapon types 			: weapons{}
+*	-
+***********************************************************
+*	OBJ-OBJ communication
+*	
+*	
+*	
+*	
+*	
+***********************************************************/
+
+var weapons = {
+	// gun1 - to be "automatic projectile emitter"
+	projectileEmitter : {	
+		projType  : "bullet",
+		projSpeed : 8,
+		fireMode  : "auto",
+		fireRate : 5,
+		damage 	  : 10
+	},
+	// gun2 - to be sth like "railgun/laser rifle"
+	laserRifle : {
+		projType  : "laser",
+		projSpeed : 30,
+		fireMode  : "single",
+		fireRate : 50,
+		damage	  : 50
+	},
+	// gun3 - sth like a grenade launcher
+	grenadeLauncher : {
+		projType  : "grenade",
+		projSpeed : 3,
+		fireMode  : "single",
+		fireRate : 100,
+		damage	  : 200
+	}
+
+}
 
 var keyCode_ = "";
-var plr = new Player(300, 300, 100, 10, 'green');
-var gun1 = {
-	projType : "bullet",
-	projSpeed : 8,
-	fireMode : "auto"
-}
-var gun2 = {
-	projType : "laser",
-	projSpeed : 15,
-	fireMode : "single"
-}
-var gun = gun1;
+
+var plr = new Player(300, 300, 100, 10, 'green', weapons['projectileEmitter']);
 
 var projectiles = [];
-var hostiles = [new Enemy(300, 100, [300, 300], 2, 50, 10, 'red') ];
+// var hostiles = [new Enemy(300, 100, [300, 300], 2, 100, 10, 'red') ];
+var hostiles = [];
+for (var i = 1; i < 31; i++) {
+	if (i <= 10) hostiles.push(new Enemy(25*i + 100, 20, [300, 300], 2, 100, 10, 'red'));
+	if (i > 10 && i <= 20) hostiles.push(new Enemy(25*i - 150, 120, [300, 300], 2, 100, 10, 'red'));
+	if (i > 20 && i <= 30) hostiles.push(new Enemy(25*i - 350, 220, [300, 300], 2, 100, 10, 'red'));
+}
 
 // ============================================   SETUP
 function setup() {
@@ -40,40 +86,45 @@ function draw() {
 		obj.edges(obj, projectiles, height, width);
 	}
 	for(let obj of hostiles){
+		obj.die(obj, hostiles);
 		obj.calcPos();
 		obj.redraw();
+		// 
 		for(let subobj of projectiles){
 			obj.collisions(subobj);
 		}
 	}
 
 	if(mouseIsPressed && mouseButton === LEFT){
-		if(frameCount - initialFrameCount > 5){
-			projectiles.push(new Projectile(plr, [mouseX, mouseY], gun));
+		if(frameCount - initialFrameCount > plr.gun.fireRate ){
+			projectiles.push(new Projectile(plr, [mouseX, mouseY], plr.gun));
 			initialFrameCount = frameCount;
 		}
 	}
-	if(mouseIsPressed && mouseButton === CENTER){
-		hostiles.push(new Enemy(mouseX, mouseY, [mouseX, mouseY], 5, 50, 10, 'red') );
-	}
-
+	
 	debugInfo(plr);
 }
 // ============================================   END-DRAW
 
 function keyPressed() {
 	if (keyCode === 49){
-		gun = gun1;
+		plr.gun = weapons['projectileEmitter'];
 	}
 	if (keyCode === 50){
-		gun = gun2;
+		plr.gun = weapons['laserRifle'];
+	}
+	if (keyCode === 51){
+		plr.gun = weapons['grenadeLauncher'];
 	}
 }
 
 function mousePressed() {
 	if (mouseButton === LEFT){
 		initialFrameCount = frameCount;
-		projectiles.push(new Projectile(plr, [mouseX, mouseY], gun));
+		projectiles.push(new Projectile(plr, [mouseX, mouseY], plr.gun));
+	}
+	if( mouseButton === CENTER ){
+		hostiles.push(new Enemy(mouseX, mouseY, [mouseX, mouseY], 5, 100, 10, 'red') );
 	}
 }
 
@@ -87,9 +138,10 @@ function debugInfo(plr_){
 	// line(plr_.xpos, plr_.ypos, mouseX, mouseY);
 
 	text(keyCode_, 10, 100);
-	text(projectiles.length, 550, 20);
+	text("P: " + projectiles.length, 550, 20);
+	text("E: " + hostiles.length, 550, 50);
 
-	text(Object.values(gun)[0], 10, 70);
+	text(Object.values(plr.gun)[0], 10, 70);
 
 	if(projectiles.length){
 		text("last particle heading: " + Object.values(projectiles[projectiles.length-1].heading), 10, 45);

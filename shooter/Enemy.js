@@ -3,7 +3,10 @@
 function Enemy(initX, initY, heading_, vel_, hp_, ammo_, color_){
 	this.xpos = initX;
 	this.ypos = initY;
-	this.vel = vel_;
+	this.velx = vel_;
+	this.vely = vel_;
+	// this.accx = 0.05;
+	// this.accy = 0.05;
 
 	this.hp = hp_;
 	this.ammo = ammo_;
@@ -25,21 +28,39 @@ function Enemy(initX, initY, heading_, vel_, hp_, ammo_, color_){
 		stroke(1);
 	}
 
+	this.die = function( _self_, enemyArr ){
+		if(this.hp <= 0){
+			this.xpos = -100;
+			this.ypos = -100;
+			enemyArr.splice( enemyArr.indexOf(_self_), 1 );
+		}
+	}
+
+	this.attack = function(){
+
+	}
+
 	this.calcPos = function(){
-		// this.xpos += this.vel * random(-1,1);
-		// this.ypos += this.vel * random(-1,1);
+		// this.velx += this.accx * 10*random(-1,1);
+		// this.vely += this.accy * 10*random(-1,1);
+		
+		// this.xpos += this.velx * random(-1,1);
+		// this.ypos += this.vely * random(-1,1);
+
+		// this.accx = 0;
+		// this.accy = 0;
 
 	}
 
 	this.collisions = function( obj ){
 		if (obj instanceof Projectile){
-			console.log("collis. check");
+			// console.log("collis. check");
 
-		  if((obj.xpos+20>=this.xpos && obj.xpos-20<=this.xpos) && (obj.ypos+20<=this.ypos && obj.ypos-20>=this.ypos )){
-		  	console.log("HIT !");
+		  if((obj.xpos >= this.xpos-20 && obj.xpos <= this.xpos+20) && (obj.ypos >= this.ypos-20 && obj.ypos <= this.ypos+20 )){
+		  	// console.log("HIT !");
 
 		  	obj.xpos = -100; obj.ypos = -100;
-		  	this.hp -= 5;
+		  	this.hp -= obj.dmg;
 		  }
 
 		}

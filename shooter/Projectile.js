@@ -8,7 +8,9 @@ function Projectile(origin_, heading_, weapon_){
 		x : 0.01*(heading_[0] - this.xpos),
 		y : 0.01*(heading_[1] - this.ypos)
 	}
+	// this.weapon = weapon_;
 	this.vel = weapon_.projSpeed;
+	this.dmg = weapon_.damage;
 
 	this.calcPos = function() {
 		// let headingMag = Math.sqrt(this.heading.x, this.heading.y);

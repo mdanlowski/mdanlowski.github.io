@@ -2,12 +2,13 @@
 
 // Player.prototype = Object.create(GameObject.prototype);
 
-function Player(initX, initY, hp_, ammo_, color_){
+function Player(initX, initY, hp_, ammo_, color_, gun_){
 	this.xpos = initX;
 	this.ypos = initY;
 	this.hp = hp_;
 	this.ammo = ammo_;
 	this.clr = color_;
+	this.gun = gun_;
 
 	this.redraw = function(){
 		fill( this.clr );
