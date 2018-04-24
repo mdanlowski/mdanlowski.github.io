@@ -58,7 +58,7 @@ var weapons = {
 
 // NEW / EXPERIMENTAL / --- add to docum.! ---
 // dependency: Projectile
-var animations = Animation(); 
+var animations = new Animation(); 
 // END_NEW
 
 var keyCode_ = "";

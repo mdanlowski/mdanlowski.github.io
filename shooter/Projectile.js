@@ -54,8 +54,8 @@ function Projectile(origin_, heading_, weapon_){
 				ellipse(this.xpos, this.ypos, 10, 10);
 					// grenade explosion
 					if (frameCount - this.birthFrameCount > 50) {
-						let explosion = new Animation(this.xpos, this.ypos, "explosion");
-						explosion.redraw();
+						// animations is global for main game loop
+						animations.drawAnimAt(this.xpos, this.ypos, "explosion", frameCount);
 						// kill the projectile
 						this.xpos = -100; this.ypos = -100;
 						
