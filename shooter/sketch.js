@@ -13,7 +13,7 @@
 *		- projectiles that hit any object (enemy, wall, etc.) are moved outside the world
 *			- p. that fly outside the world are moved to (-100,-100) and are removed from
 *			  the array to be destroyed by JS GC
-*	- an object holding weapon types 			: weapons{}
+*	- an object holding weapon types 			: Weapons{}
 *	-
 ***********************************************************
 *	:: OBJ-OBJ communication ::
@@ -23,38 +23,17 @@
 *	
 *	
 ***********************************************************
-*loose ideas:
-*websockets for multiplayer
-*
+	TODOS:
+	! implement closures for access control on damage etc. - but really?
+	! finish Enemy.calcPos -- moveFashion - how to randomize?
+	! resolve Animation() loops
+
+***********************************************************
+	loose ideas:
+	! websockets for multiplayer
+	!
+
 */
-
-var weapons = {
-	// gun1 - to be "automatic projectile emitter"
-	projectileEmitter : {	
-		projType  : "bullet",
-		projSpeed : 8,
-		fireMode  : "auto",
-		fireRate : 5,
-		damage 	  : 10
-	},
-	// gun2 - to be sth like "railgun/laser rifle"
-	laserRifle : {
-		projType  : "laser",
-		projSpeed : 30,
-		fireMode  : "single",
-		fireRate : 50,
-		damage	  : 50
-	},
-	// gun3 - sth like a grenade launcher
-	grenadeLauncher : {
-		projType  : "grenade",
-		projSpeed : 3,
-		fireMode  : "single",
-		fireRate : 100,
-		damage	  : 200
-	}
-
-}
 
 // NEW / EXPERIMENTAL / --- add to docum.! ---
 // dependency: Projectile
@@ -63,7 +42,7 @@ var animations = new Animation();
 
 var keyCode_ = "";
 
-var plr = new Player(300, 300, 100, 10, 'green', weapons['projectileEmitter']);
+var plr = new Player(300, 300, 100, 10, 'green', Weapons['projectileEmitter']);
 
 var projectiles = [];
 // var hostiles = [new Enemy(300, 100, [300, 300], 2, 100, 10, 'red') ];
@@ -95,8 +74,9 @@ function draw() {
 		obj.edges(obj, projectiles, height, width);
 	}
 	for(let obj of hostiles){
-		obj.die(obj, hostiles);
-		obj.calcPos();
+		obj.checkDeath(obj, hostiles);
+		obj.calcPos('stationary');
+		// obj.calcPos('random');
 		obj.redraw();
 		// 
 		for(let subobj of projectiles){
@@ -117,13 +97,13 @@ function draw() {
 
 function keyPressed() {
 	if (keyCode === 49){
-		plr.gun = weapons['projectileEmitter'];
+		plr.gun = Weapons['projectileEmitter'];
 	}
 	if (keyCode === 50){
-		plr.gun = weapons['laserRifle'];
+		plr.gun = Weapons['laserRifle'];
 	}
 	if (keyCode === 51){
-		plr.gun = weapons['grenadeLauncher'];
+		plr.gun = Weapons['grenadeLauncher'];
 	}
 }
 

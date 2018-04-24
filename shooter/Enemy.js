@@ -5,6 +5,9 @@ function Enemy(initX, initY, heading_, vel_, hp_, ammo_, color_){
 	this.ypos = initY;
 	this.velx = vel_;
 	this.vely = vel_;
+
+	let xoff = 0.01 * rand();
+	let yoff = 0.01 * rand();
 	// this.accx = 0.05;
 	// this.accy = 0.05;
 
@@ -28,7 +31,7 @@ function Enemy(initX, initY, heading_, vel_, hp_, ammo_, color_){
 		stroke(1);
 	}
 
-	this.die = function( _self_, enemyArr ){
+	this.checkDeath = function( _self_, enemyArr ){
 		if(this.hp <= 0){
 			this.xpos = -100;
 			this.ypos = -100;
@@ -40,7 +43,29 @@ function Enemy(initX, initY, heading_, vel_, hp_, ammo_, color_){
 
 	}
 
-	this.calcPos = function(){
+	this.calcPos = function( moveFashion ){
+		// !!!!!!!!!!!!! to implement
+		switch(moveFashion){
+			case 'stationary':
+				break;
+
+			case 'random':
+				this.xpos = noise(xoff)*width;
+ 				this.ypos = noise(yoff)*height;
+ 					xoff += (0.005 + 0.005 * rand());
+    			yoff += (0.009 + 0.005 * rand());
+				break;
+
+			case 'panic':
+				this.xpos = noise(xoff)*width;
+ 				this.ypos = noise(yoff)*height;
+ 					xoff += 0.009;
+    			yoff += 0.011;
+				break;
+
+			case 'follow': // !!!!!!!!!!!!! to implement
+				break;
+		}
 		// this.velx += this.accx * 10*random(-1,1);
 		// this.vely += this.accy * 10*random(-1,1);
 		
@@ -69,4 +94,9 @@ function Enemy(initX, initY, heading_, vel_, hp_, ammo_, color_){
 
 	this.behaviour = function(){
 	}
+}
+
+// ============== tool functions for move mechanics
+function rand(){
+	return 0.01 * Math.round(100*Math.random() - 50);
 }

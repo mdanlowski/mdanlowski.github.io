@@ -64,7 +64,9 @@ function Projectile(origin_, heading_, weapon_){
 		}
 	}
 }
+
 // ============ some mechanics maths ===========
+// !!!!!!!!!!!!!!!!!!!!!!!!!!! DESCRIBE THE STRUGGLE
 // var headingMag = (hx, hy) => Math.sqrt(hx**2 + hy**2);
 function headingMag(ph){ 
 	return Math.sqrt( ph.x**2 + ph.y**2 ); // UNDEF?!?!?
