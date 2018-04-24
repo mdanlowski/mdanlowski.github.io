@@ -2,13 +2,13 @@
 // import { Player } from "Player";
 
 /**********************************************************
-*	sketch.js - main game animation loop
+*	:: sketch.js - main game animation loop ::
 ***********************************************************	
 *	designed in OO fashion
-*	- one instance of Player Object				: plr
-*	- an array holding all active hostiles		: hostiles[]
-*		- inactive hostiles (killed) are moved outside the world and removed from the array
-*		  to be destroyed by the JS GC
+*	- one instance of Player					: plr
+*	- an array holding all active hostiles		: hostiles[] (instances of Enemy)
+*		- inactive hostiles (killed) are moved outside the world (-100,-100) and removed from the
+*		  array to be destroyed by the JS GC
 *	- an array holding all shot out projectiles	: projectiles[]
 *		- projectiles that hit any object (enemy, wall, etc.) are moved outside the world
 *			- p. that fly outside the world are moved to (-100,-100) and are removed from
@@ -16,13 +16,17 @@
 *	- an object holding weapon types 			: weapons{}
 *	-
 ***********************************************************
-*	OBJ-OBJ communication
+*	:: OBJ-OBJ communication ::
+***********************************************************
 *	
 *	
 *	
 *	
-*	
-***********************************************************/
+***********************************************************
+*loose ideas:
+*websockets for multiplayer
+*
+*/
 
 var weapons = {
 	// gun1 - to be "automatic projectile emitter"
@@ -51,6 +55,11 @@ var weapons = {
 	}
 
 }
+
+// NEW / EXPERIMENTAL / --- add to docum.! ---
+// dependency: Projectile
+var animations = Animation(); 
+// END_NEW
 
 var keyCode_ = "";
 

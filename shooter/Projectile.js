@@ -29,7 +29,8 @@ function Projectile(origin_, heading_, weapon_){
 		}
 	}
 
-	this.redraw = function(){
+	this.redraw = function(){ 
+		// could it be simplified by passing projType into function???
 		switch(weapon_.projType){
 			case "bullet":
 				noStroke();
@@ -46,15 +47,21 @@ function Projectile(origin_, heading_, weapon_){
 				line(this.xpos, this.ypos, laserLineX, laserLineY );
 				break;
 
+			case "grenade":
+				strokeWeight(3);
+				stroke("black");
+				fill("brown");
+				ellipse(this.xpos, this.ypos, 10, 10);
+					// grenade explosion
+					if (frameCount - this.birthFrameCount > 50) {
+						let explosion = new Animation(this.xpos, this.ypos, "explosion");
+						explosion.redraw();
+						// kill the projectile
+						this.xpos = -100; this.ypos = -100;
+						
+					}
+				break;
 		}
-
-		// nullifying objects for GC
-		// if (frameCount - this.birthFrameCount > 1000){
-		// 	for (var i = Object.keys(this).length - 1; i >= 0; i--) {
-		// 	 	Object.keys(this)[i] = null;
-		// 	 }
-		// }
-		
 	}
 }
 // ============ some mechanics maths ===========
