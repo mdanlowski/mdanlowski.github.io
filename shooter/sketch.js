@@ -1,17 +1,17 @@
 // Prototype project I :: Shooter game
-// import { Player } from "Player";
 
 /**********************************************************
 *	:: sketch.js - main game animation loop ::
 ***********************************************************	
+*   using p5.js framework
 *	designed in OO fashion
 *	- one instance of Player					: plr
 *	- an array holding all active hostiles		: hostiles[] (instances of Enemy)
 *		- inactive hostiles (killed) are moved outside the world (-100,-100) and removed from the
 *		  array to be destroyed by the JS GC
-*	- an array holding all shot out projectiles	: projectiles[]
+*	- an array holding all player's projectiles	: projectiles[]
 *		- projectiles that hit any object (enemy, wall, etc.) are moved outside the world
-*			- p. that fly outside the world are moved to (-100,-100) and are removed from
+*			- p. that are moved or fly outside the world go to (-100,-100) and are removed from
 *			  the array to be destroyed by JS GC
 *	- an object holding weapon types 			: Weapons{}
 *	-
@@ -24,7 +24,7 @@
 *	
 ***********************************************************
 	TODOS:
-	! implement closures for access control on damage etc. - but really?
+	! implement closures for access control on damage etc. - or not?
 	! finish Enemy.calcPos -- moveFashion - how to randomize?
 	! resolve Animation() loops
 
@@ -47,11 +47,11 @@ var plr = new Player(300, 300, 100, 10, 'green', Weapons['projectileEmitter']);
 var projectiles = [];
 // var hostiles = [new Enemy(300, 100, [300, 300], 2, 100, 10, 'red') ];
 var hostiles = [];
-for (var i = 1; i < 31; i++) {
-	if (i <= 10) hostiles.push(new Enemy(25*i + 100, 20, [300, 300], 2, 100, 10, 'red'));
-	if (i > 10 && i <= 20) hostiles.push(new Enemy(25*i - 150, 120, [300, 300], 2, 100, 10, 'red'));
-	if (i > 20 && i <= 30) hostiles.push(new Enemy(25*i - 350, 220, [300, 300], 2, 100, 10, 'red'));
-}
+// for (var i = 1; i < 31; i++) {
+// 	if (i <= 10) hostiles.push(new Enemy(25*i + 100, 20, [300, 300], 2, 100, 10, 'red'));
+// 	if (i > 10 && i <= 20) hostiles.push(new Enemy(25*i - 150, 120, [300, 300], 2, 100, 10, 'red'));
+// 	if (i > 20 && i <= 30) hostiles.push(new Enemy(25*i - 350, 220, [300, 300], 2, 100, 10, 'red'));
+// }
 
 // ============================================   SETUP
 function setup() {
@@ -62,28 +62,32 @@ function setup() {
 // ============================================   END-SETUP
 // ============================================   DRAW
 function draw() {
+	// Render background
 	background(0, 250, 100);
 
+	// Player: calculate position and redraw; draw HP and ammo
 	plr.calcPos();
 	plr.redraw();
 	plr.drawStats();
 
 	for(let obj of projectiles){
+		// Projectiles: calculate positions and redraw each object
 		obj.calcPos();
 		obj.redraw();
 		obj.edges(obj, projectiles, height, width);
 	}
 	for(let obj of hostiles){
-		obj.checkDeath(obj, hostiles);
-		obj.calcPos('stationary');
-		// obj.calcPos('random');
+		// Hostiles: calculate positions depending on the move pattern and redraw each object
+		obj.checkDeath(obj, hostiles); // pass a specific hostile as obj and the reference to hostiles array so that obj can be removed
+		// obj.calcPos('stationary');
+		obj.calcPos('random');
 		obj.redraw();
-		// 
+		// Below, every enemy on the map checks it's own position against all "active" projectiles positions
 		for(let subobj of projectiles){
 			obj.collisions(subobj);
 		}
 	}
-
+	// Shooting:
 	if(mouseIsPressed && mouseButton === LEFT){
 		if(frameCount - initialFrameCount > plr.gun.fireRate ){
 			projectiles.push(new Projectile(plr, [mouseX, mouseY], plr.gun));

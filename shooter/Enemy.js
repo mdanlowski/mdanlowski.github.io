@@ -6,14 +6,14 @@ function Enemy(initX, initY, heading_, vel_, hp_, ammo_, color_){
 	this.velx = vel_;
 	this.vely = vel_;
 
-	let xoff = 0.01 * rand();
-	let yoff = 0.01 * rand();
+	let xoff = 0.01;// * rand();
+	let yoff = 0.01;// * rand();
 	// this.accx = 0.05;
 	// this.accy = 0.05;
 
 	this.hp = hp_;
 	this.ammo = ammo_;
-	this.clr = color_;
+	this.color = color_;
 
 	this.heading = {
 		x : 0.01*(heading_[0] - this.xpos),
@@ -21,7 +21,7 @@ function Enemy(initX, initY, heading_, vel_, hp_, ammo_, color_){
 	}
 
 	this.redraw = function(){
-		fill( this.clr );
+		fill( this.color );
 		stroke(0);
 		strokeWeight(1);
 		ellipse(this.xpos, this.ypos, 22, 22);
@@ -35,7 +35,7 @@ function Enemy(initX, initY, heading_, vel_, hp_, ammo_, color_){
 		if(this.hp <= 0){
 			this.xpos = -100;
 			this.ypos = -100;
-			enemyArr.splice( enemyArr.indexOf(_self_), 1 );
+			enemyArr.splice( enemyArr.indexOf( _self_ ), 1 );
 		}
 	}
 
@@ -53,14 +53,14 @@ function Enemy(initX, initY, heading_, vel_, hp_, ammo_, color_){
 				this.xpos = noise(xoff)*width;
  				this.ypos = noise(yoff)*height;
  					xoff += (0.005 + 0.005 * rand());
-    			yoff += (0.009 + 0.005 * rand());
+    				yoff += (0.009 + 0.005 * rand());
 				break;
 
 			case 'panic':
 				this.xpos = noise(xoff)*width;
  				this.ypos = noise(yoff)*height;
  					xoff += 0.009;
-    			yoff += 0.011;
+    				yoff += 0.011;
 				break;
 
 			case 'follow': // !!!!!!!!!!!!! to implement
@@ -95,6 +95,7 @@ function Enemy(initX, initY, heading_, vel_, hp_, ammo_, color_){
 	this.behaviour = function(){
 	}
 }
+
 
 // ============== tool functions for move mechanics
 function rand(){
