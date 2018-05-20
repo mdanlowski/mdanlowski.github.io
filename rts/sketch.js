@@ -9,13 +9,14 @@ var keyCode_ = "";
 // ============================================   SETUP
 function setup() {
 	createCanvas(600, 600);
-	textSize(20);
+	textSize(15);
 	var initialFrameCount = frameCount;
 }
 // ============================================   END-SETUP
 
 // ============================================   GAME OBJECTS
-var test = new GameObject(300, 300, 100, 100, 'red');
+var test = new GameObject(300, 300, 10, 0, 'red');
+var gobjects = [];
 // ============================================   END-OBJECTS
 
 // ============================================   DRAW
@@ -26,15 +27,31 @@ function draw() {
 	if(mouseIsPressed && mouseButton === LEFT){
 		rectSelect(selectInitX, selectInitY);
 	}
-	
-	test.redraw();
 
+	test.redraw();
+	for(let obj of gobjects){
+		obj.redraw();
+	}
 }
 // ============================================   END-DRAW
 
 function mousePressed() {
 	selectInitX = mouseX;
 	selectInitY = mouseY;
+
+	let r, g, b;
+	r = Math.round(random(255));
+	g = Math.round(random(255));
+	b = Math.round(random(255));
+	if(mouseButton === CENTER) {
+		let temp = new GameObject(mouseX, mouseY, 10, 0, 'rgb('+r+','+g+','+b+')');
+		// console.log(temp.clr);
+		gobjects.push(temp);
+	}
+}
+
+function mouseReleased() {
+  selectionOn = false;
 }
 
 function rectSelect(initX, initY){
@@ -45,13 +62,15 @@ function rectSelect(initX, initY){
 		selectionOn = true;
 		rect(initX, initY, mouseX-initX, mouseY-initY);
 	}
-	else{
-		selectionOn = false;
-	}
+	// else{
+	// 	selectionOn = false;
+	// }
+	text((mouseX-initX) + ", " + (mouseY-initY), mouseX+10, mouseY+20);
 }
 
 function keyPressed() {
 	//keyCode
+	
 }
 
 
