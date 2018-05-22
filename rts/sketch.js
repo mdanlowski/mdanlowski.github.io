@@ -7,6 +7,9 @@
 var keyCode_ = "";
 
 // ============================================   SETUP
+// disable context menu so that right mouse key can be used for controls
+document.addEventListener('contextmenu', event => event.preventDefault());
+
 function setup() {
 	createCanvas(600, 600);
 	textSize(15);
@@ -43,7 +46,8 @@ function mousePressed() {
 	r = Math.round(random(255));
 	g = Math.round(random(255));
 	b = Math.round(random(255));
-	if(mouseButton === CENTER) {
+
+	if(mouseButton === RIGHT) {
 		let temp = new GameObject(mouseX, mouseY, 10, 0, 'rgb('+r+','+g+','+b+')');
 		// console.log(temp.clr);
 		gobjects.push(temp);
