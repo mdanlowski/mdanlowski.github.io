@@ -12,8 +12,9 @@ function GameObject(initX, initY, hp_, ammo_, color_){
 		//check selection area
 		/**********************************************************
 		*	TODO
-		*	- make select work when mouse moves from + to -
+		*	+ make select work when mouse moves from + to -
 		*	- export selection checking code to external file
+		*	- 
 		************************************************************/
 		
 		if ( selectionOn && (this.xpos > selectInitX && this.xpos < mouseX) && (this.ypos > selectInitY && this.ypos < mouseY) ) {
