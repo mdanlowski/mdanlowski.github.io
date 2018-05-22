@@ -10,13 +10,21 @@ function GameObject(initX, initY, hp_, ammo_, color_){
 
 	this.redraw = function(){
 		//check selection area
+		/**********************************************************
+		*	TODO
+		*	- make select work when mouse moves from + to -
+		*	- export selection checking code to external file
+		************************************************************/
+		
 		if ( selectionOn && (this.xpos > selectInitX && this.xpos < mouseX) && (this.ypos > selectInitY && this.ypos < mouseY) ) {
-		// if ( this.xpos.between(selectInitX, Math.abs(mouseX-selectInitX)) && this.ypos.between(selectInitY, Math.abs(mouseY-selectInitY)) )  {
 				this.isSelected = true;
 		}
 		if ( selectionOn && !((this.xpos > selectInitX && this.xpos < mouseX) && (this.ypos > selectInitY && this.ypos < mouseY)) ){
 				this.isSelected = false;
+		}
 
+		if ( selectionOn && (this.xpos < selectInitX && this.xpos > mouseX) && (this.ypos < selectInitY && this.ypos > mouseY) ) {
+				this.isSelected = true;
 		}
 
 		if(this.isSelected){

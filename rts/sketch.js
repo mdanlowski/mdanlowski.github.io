@@ -2,9 +2,14 @@
 
 /**********************************************************
 *	:: sketch.js - main game animation loop ::
-***********************************************************
-*/
+************************************************************/
+
+
+// ============================================   GLOBAL VARS
 var keyCode_ = "";
+
+// ============================================   END-VARS
+
 
 // ============================================   SETUP
 // disable context menu so that right mouse key can be used for controls
@@ -47,15 +52,27 @@ function mousePressed() {
 	g = Math.round(random(255));
 	b = Math.round(random(255));
 
-	if(mouseButton === RIGHT) {
-		let temp = new GameObject(mouseX, mouseY, 10, 0, 'rgb('+r+','+g+','+b+')');
+	// if(mouseButton === RIGHT) {
+		if(mouseButton === CENTER) {
+			let temp = new GameObject(mouseX, mouseY, 10, 0, 'rgb('+r+','+g+','+b+')');
 		// console.log(temp.clr);
 		gobjects.push(temp);
 	}
 }
 
 function mouseReleased() {
-  selectionOn = false;
+	selectionOn = false;
+}
+
+function mouseDragged() {
+	ellipse(mouseX, mouseY, 5, 5);
+  // prevent default
+  return false;
+}
+
+function keyPressed() {
+	//keyCode
+	
 }
 
 function rectSelect(initX, initY){
@@ -71,12 +88,6 @@ function rectSelect(initX, initY){
 	// }
 	text((mouseX-initX) + ", " + (mouseY-initY), mouseX+10, mouseY+20);
 }
-
-function keyPressed() {
-	//keyCode
-	
-}
-
 
 function debugInfo(plr_){
 	textSize(20);
