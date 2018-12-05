@@ -116,7 +116,7 @@ function mousePressed() {
 		initialFrameCount = frameCount;
 		projectiles.push(new Projectile(plr, [mouseX, mouseY], plr.gun));
 	}
-	if( mouseButton === CENTER ){
+	if( mouseButton === RIGHT ){
 		hostiles.push(new Enemy(mouseX, mouseY, [mouseX, mouseY], 5, 100, 10, 'red') );
 	}
 }
