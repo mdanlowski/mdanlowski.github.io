@@ -10,13 +10,26 @@ $bl: #7eacdc;
 
 @media only screen and (min-width: 426px) {
 	.responsive-wrapper {
-		padding: 10% 15% 10% 15%;
+		padding: 10% 12% 10% 12%;
+	}
+	.grid-wrapper {
+		grid-template-columns: repeat(5, 400px);
+		grid-template-rows: 400px;
+		overflow-x: scroll;
+		overflow-y: hidden;
 	}
 }
 
 @media only screen and (max-width: 426px) {
 	.responsive-wrapper {
-		padding: 50px 0 0 0;
+		padding-top: 50px;
+		margin: auto;
+	}
+	.grid-wrapper {
+		grid-template-rows: repeat(5, 400px);
+		grid-template-columns: 400px;
+		/*overflow-x: scroll;*/
+		/*overflow-y: hidden;*/
 	}
 }
 
@@ -55,10 +68,7 @@ a {
 .grid-wrapper {
 	display: grid;
 	grid-gap: 10px;
-	grid-template-columns: repeat(5, 400px);
-	grid-template-rows: 400px;
-	overflow-x: scroll;
-	overflow-y: hidden;
+
 }
 
 .project-box {
