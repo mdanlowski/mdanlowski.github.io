@@ -159,5 +159,5 @@ function debugInfo(plr_){
 
 	textSize(15);
 	fill('red');
-	text("WASD - move; 1,2 - guns", 10, 590);
+	text("WASD - move; 1,2 - guns; MouseRight - spawn bots", 10, 590);
 }
