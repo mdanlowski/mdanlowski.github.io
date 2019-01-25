@@ -17,7 +17,7 @@
 <body>
 	<div id="root">
 		<div class="toggleasc" onclick="document.getElementById('TASC').click()">
-			<input id="TASC" checked type="checkbox" name="autoscroll">Toggle Autoscroll
+			<input id="TASC" checked type="checkbox" name="autoscroll">Toggle Autoscroll (Spacebar)
 		</div>
 		<div class="responsive-wrapper">
 			<div class="grid-wrapper">
@@ -62,9 +62,21 @@
 					<div class="slidein-details" onclick="slideOutTile(this, event);">
 						<div class="details-grid">
 							<div class="details-grid-element"></div>
-							<div class="details-grid-element"></div>
-							<div class="details-grid-element"></div>
-							<div class="details-grid-element"></div>
+							<div class="details-grid-element" onclick="window.open('http://anonquotes.herokuapp.com/');">
+								Open Heroku App
+							</div>
+							<div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/rails/tree/master/Proto');">
+								Open Code Repository
+							</div>
+							<div class="details-grid-element">
+								<ul>
+									<li>My First Rails App</li>
+									<li>First-time Deploy</li>
+									<li>RWD [████████░░]</li>
+
+								</ul>
+								
+							</div>
 						</div>
 
 					</div>

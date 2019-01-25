@@ -31,3 +31,8 @@ function slideOutTile(obj, event) {
 
 document.onmousemove = handleMouse;
 
+// switch horizontal scroll with space as well
+document.addEventListener('keydown', function(e){
+	// console.log(e.code);
+	if (e.code == 'Space') document.getElementById('TASC').click();
+});
