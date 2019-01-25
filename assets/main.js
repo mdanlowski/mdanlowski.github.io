@@ -17,7 +17,7 @@ function slideInTile(obj, event) {
 	// console.log(obj.style.height)// = '0%';
 	setTimeout(function() {
 		obj.style.display = 'none';
-	}, 300);
+	}, 480);
 	
 	
 }

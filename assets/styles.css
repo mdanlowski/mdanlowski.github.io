@@ -168,6 +168,8 @@ a {
   	grid-template-rows: 50% 50%;
   	grid-template-columns: 50% 50%;
 
+	color: darkred;
+
 }
 
 .details-grid-element {
@@ -175,12 +177,13 @@ a {
 	/*border: 1px solid #1E3471;*/
 	width: 100%;
 	height: 100%;
-	background-color: #000000bd; 
+	background-color: #000000cd; 
 
 }
 
 .details-grid-element ul {
-	padding-left: 20px;
+	/*margin-top: -5px;*/
+	padding-left: 25px;
 }
 .details-grid-element ul li {
 	list-style: none;
@@ -188,18 +191,18 @@ a {
 
 .p1 .details-grid-element:first-child, .p2 .details-grid-element:first-child {
 	background: url('img/rubyonrails.png');
-	background-color: #000000bd; 
+	background-color: #000000cd; 
 	background-size: 90%;
 	background-repeat: no-repeat !important;
 	background-position: center;
 	
 }
-.p1 .details-grid-element:nth-child(3), .p1 .details-grid-element:nth-child(4) {
+.p1 .details-grid-element:nth-child(3), .p1 .details-grid-element:nth-child(2) {
 	text-align: center;
 	line-height: 200px;
 	font-weight: bold;
 }
-.p1 .details-grid-element:nth-child(3):hover, .p1 .details-grid-element:nth-child(4):hover {
+.p1 .details-grid-element:nth-child(3):hover, .p1 .details-grid-element:nth-child(2):hover {
 	color: black;
 	background-color: darkred;
 }
@@ -258,6 +261,7 @@ a {
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: crimson; 
+  /*background: crimson; */
+  background: darkred; 
 }
 /*------------------end-scrollbar------------------------*/
