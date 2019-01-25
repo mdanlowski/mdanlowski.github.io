@@ -1,0 +1,263 @@
+/*
+design by mdanlowski
+
+$bd: #091534;
+$bmd: #1E3471;
+$bm: #213B82;
+$bml: #17a2b8;
+$bl: #7eacdc;
+*/
+
+@media only screen and (min-width: 426px) {
+	.responsive-wrapper {
+		padding: 10% 15% 10% 15%;
+	}
+}
+
+@media only screen and (max-width: 426px) {
+	.responsive-wrapper {
+		padding: 50px 0 0 0;
+	}
+}
+
+
+body {
+	/*height: 100vh;*/
+	/*width: 100%;*/
+	background: linear-gradient(0deg,rgba(9,21,52,0.3),rgba(9,21,52,1),rgba(9,21,52,0.8),rgba(9,21,52,0.9),rgba(9,21,52,1), rgb(0,20,30)),
+				linear-gradient(0deg,transparent,blue), url('img/bg_large.jpg');
+	background-size: cover;
+}
+
+a {
+	/*text-decoration: underline !important;*/
+	color: inherit !important;
+}
+
+.toggleasc {
+	position: fixed;
+	top: 5px;
+	left: 5px; 
+	font-size: 0.7em;
+	font-style: italic;
+	color: #7eacdc !important;
+}
+
+.responsive-wrapper {
+	height: 100vh;
+	width: 100%;
+/*	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;*/
+}
+
+.grid-wrapper {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(5, 400px);
+	grid-template-rows: 400px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+
+.project-box {
+	background: #091534;
+	min-height: 200px;
+	min-width: 200px;
+	max-height: 100%;
+	max-width: 100%;
+	color: crimson;
+
+	cursor: pointer;
+
+}
+
+
+.proj {
+	background-size: cover !important;
+	background-position: center !important;
+}
+
+
+.box-overlay {
+	display: flex;
+	width: 100% !important;
+	height: 100%;
+	background: rgba(9,21,52,0.85);
+	/*---*/
+	-webkit-transition: background 0.5s; /* Safari */
+  	transition: background 0.5s;
+}
+.darkened {
+	background: rgba(9,21,52,0.90);
+}
+
+.box-overlay:hover {
+	background: rgba(9,21,52,0.3);
+}
+.darkened:hover {
+	background: rgba(9,21,52,0.6);
+}
+
+
+.p1 {
+	background: url('img/rails_1_blog.png');
+}
+
+
+.p2 {
+	background: url('img/rails_0_quotes.png');
+}
+
+.p3 {
+	background-repeat: no-repeat !important;
+	background-size: contain !important;
+	background: url('img/node_0_paint.png'), white;
+}
+.p3 p {
+	color: #008a00 !important;
+}
+
+.p4 {
+	background: url('img/js_0_shooter.png');
+}
+
+.p5 {
+	background: url('img/html_css_js_APIs_0_quote_machine.png');
+}
+
+.proj-descr {
+	padding: 10px;
+	width: 100%;
+	/*height: 100%;*/
+	align-self: flex-end;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+	/*background-color: #091534;*/
+	
+	/*font-weight: bold;*/
+	color: crimson;
+
+	/*opacity: 0;*/
+}
+.proj-descr:hover {
+	opacity: 1;
+}
+
+
+.slidein-details {
+	width: 100%;
+	height: 0%;
+	font-size: 0;
+
+	-webkit-transition: height 0.6s, font-size 0.6s; /* Safari */
+  	transition: height 0.6s, font-size 0.6s;
+
+}
+
+.details-grid {
+	width: 100%;
+	height: 100%;
+
+	display: grid;
+  	/*grid-gap: 5px;*/
+  	grid-template-rows: 50% 50%;
+  	grid-template-columns: 50% 50%;
+
+}
+
+.details-grid-element {
+	/*display: none;*/
+	/*border: 1px solid #1E3471;*/
+	width: 100%;
+	height: 100%;
+	background-color: #000000bd; 
+
+}
+
+.details-grid-element ul {
+	padding-left: 20px;
+}
+.details-grid-element ul li {
+	list-style: none;
+}
+
+.p1 .details-grid-element:first-child, .p2 .details-grid-element:first-child {
+	background: url('img/rubyonrails.png');
+	background-color: #000000bd; 
+	background-size: 90%;
+	background-repeat: no-repeat !important;
+	background-position: center;
+	
+}
+.p1 .details-grid-element:nth-child(3), .p1 .details-grid-element:nth-child(4) {
+	text-align: center;
+	line-height: 200px;
+	font-weight: bold;
+}
+.p1 .details-grid-element:nth-child(3):hover, .p1 .details-grid-element:nth-child(4):hover {
+	color: black;
+	background-color: darkred;
+}
+
+
+.p3 .details-grid-element:first-child {
+	background: url('img/nodejs.png');
+	/*background-color: #000000bd; */
+	background-color: #091534;
+	background-size: 75%;
+	background-repeat: no-repeat !important;
+	background-position: center;
+	
+}
+
+.p4 .details-grid-element:first-child {
+	background: url('img/pfive.png');
+	/*background-color: #000000bd; */
+	background-color: #091534;
+	background-size: 80%;
+	background-repeat: no-repeat !important;
+	background-position: center;
+	
+}
+
+.p5 .details-grid-element:first-child {
+	background: url('img/apisymbol.png');
+	/*background-color: #000000bd; */
+	background-color: #091534;
+	background-size: cover;
+	background-repeat: no-repeat !important;
+	background-position: center;
+	
+}
+
+
+
+
+
+
+/*----------------------scrollbar------------------------*/
+/* width */
+::-webkit-scrollbar {
+  height: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  /*background: #f1f1f1; */
+  background: #333; 
+  position: absolute;
+  bottom: 0;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555; 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: crimson; 
+}
+/*------------------end-scrollbar------------------------*/
