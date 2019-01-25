@@ -17,6 +17,8 @@ $bl: #7eacdc;
 		grid-template-rows: 400px;
 		overflow-x: scroll;
 		overflow-y: hidden;
+
+		/*opacity: 0.2;*/
 	}
 }
 
@@ -123,7 +125,9 @@ a {
 .p3 {
 	background-repeat: no-repeat !important;
 	background-size: contain !important;
-	background: url('img/node_0_paint.png'), white;
+	background: linear-gradient(180deg,rgba(9,21,52,0.3),rgba(9,21,52,0.5)), url('img/node_0_paint.png'), white;
+	/*background-color: rgba(9,21,52,0.5);*/
+	/*background: linear-gradient(0deg,blue,blue), url('img/node_0_paint.png'), white;*/
 }
 .p3 p {
 	color: #008a00 !important;
@@ -154,8 +158,8 @@ a {
 
 	/*opacity: 0;*/
 }
-.proj-descr:hover {
-	opacity: 1;
+.proj-descr p {
+	margin-bottom: 0 ;
 }
 
 
@@ -188,6 +192,7 @@ a {
 	width: 100%;
 	height: 100%;
 	background-color: #000000cd; 
+	/*background-color: #000000;*/
 
 }
 
@@ -198,10 +203,15 @@ a {
 .details-grid-element ul li {
 	list-style: none;
 }
+.details-grid-element ul li:hover {
+	color: crimson;
+}
 
+/*-111111111111111111111111111111111111111111111111-*/
 .p1 .details-grid-element:first-child, .p2 .details-grid-element:first-child {
 	background: url('img/rubyonrails.png');
 	background-color: #000000cd; 
+	/*background-color: #000000;*/
 	background-size: 90%;
 	background-repeat: no-repeat !important;
 	background-position: center;
@@ -217,6 +227,9 @@ a {
 	color: black;
 	background-color: darkred;
 }
+
+
+/*-2222222222222222222222222222222222222222222222222-*/
 .p2 .details-grid-element:nth-child(3), .p2 .details-grid-element:nth-child(2) {
 	/*pick me up!*/
 	text-align: center;
@@ -228,39 +241,125 @@ a {
 	background-color: darkred;
 }
 
-.p3 .details-grid-element:first-child {
-	background: url('img/nodejs.png');
-	/*background-color: #000000bd; */
-	background-color: #091534;
-	background-size: 75%;
-	background-repeat: no-repeat !important;
-	background-position: center;
-	
+
+/*-33333333333333333333333333333333333333333333333333-*/
+.p3 .details-grid-element {
+	background-color: #000000df; 
+	color: #008a00; 
 }
 
+.p3 .details-grid-element:first-child {
+	background: url('img/nodejs.png');
+	background-color: #000000ec; 
+	background-size: 75%;
+	background-repeat: no-repeat !important;
+	background-position: center;	
+}
+.p3 .details-grid-element ul li:hover {
+	color: lime;
+}
+
+/*----------------anim sequence---------------------*/
+.p3 .details-grid-element {
+	background-color: #000000ec; 
+	--webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+}
+.p3 .details-grid-element:nth-child(1){
+	opacity: 0;
+
+}
+.p3 .details-grid-element:nth-child(2){
+	opacity: 0;
+	--webkit-transition-delay: 0.5s;
+	transition-delay: 0.5s;
+
+	text-align: center;
+	line-height: 200px;
+	font-weight: bold;
+}
+.p3 .details-grid-element:nth-child(3){
+	opacity: 0;
+	--webkit-transition-delay: 1s;
+	transition-delay: 1s;
+
+	text-align: center;
+	line-height: 200px;
+	font-weight: bold;
+}
+.p3 .details-grid-element:nth-child(2):hover, .p3 .details-grid-element:nth-child(3):hover {
+	color: black;
+	background-color: #008a00;
+}
+.p3 .details-grid-element:nth-child(4){
+	opacity: 0;
+	--webkit-transition-delay: 1.5s;
+	transition-delay: 1.5s;
+
+}
+/*-4444444444444444444444444444444444444444-*/
+.p4 .details-grid-element {
+	background-color: #000000ec; 
+}
+.p4 .details-grid-element:nth-child(2), .p4 .details-grid-element:nth-child(3) {
+	text-align: center;
+	line-height: 200px;
+	font-weight: bold;
+}
+/* SAME AS TILES 1 AND 2 BUT IN CASE I WANTED TO CHANGE THAT SOON... */
+.p4 .details-grid-element:nth-child(2):hover, .p4 .details-grid-element:nth-child(3):hover {
+	color: black;
+	background-color: darkred;
+}
 .p4 .details-grid-element:first-child {
 	background: url('img/pfive.png');
+	background-color: #000000ec; 
 	/*background-color: #000000bd; */
-	background-color: #091534;
+	/*background-color: #091534;*/
 	background-size: 80%;
 	background-repeat: no-repeat !important;
 	background-position: center;
 	
 }
 
+/*-5555555555555555555555555555555555555555-*/
+
+.p5 .details-grid-element {
+	background-color: #000000ec; 
+	/*background-color: #091534eF;*/
+}
+
 .p5 .details-grid-element:first-child {
 	background: url('img/apisymbol.png');
-	/*background-color: #000000bd; */
-	background-color: #091534;
+	background-color: #000000ec; 
+	/*background-color: #091534eF;*/
 	background-size: cover;
 	background-repeat: no-repeat !important;
 	background-position: center;
 	
 }
 
+.p5 .details-grid-element:nth-child(2), .p5 .details-grid-element:nth-child(3) {
+	text-align: center;
+	line-height: 200px;
+	font-weight: bold;
+}
+/* SAME AS TILES 1 AND 2 BUT IN CASE I WANTED TO CHANGE THAT SOON... */
+.p5 .details-grid-element:nth-child(2):hover, .p5 .details-grid-element:nth-child(3):hover {
+	color: black;
+	background-color: darkred;
+}
 
 
 
+.reveal-all {
+	margin-top: -24px;
+	color: #7eacdc;
+}
+.reveal-all:hover {
+	font-weight: bold;
+
+}
 
 
 /*----------------------scrollbar------------------------*/
@@ -284,4 +383,4 @@ a {
   /*background: crimson; */
   background: darkred; 
 }
-/*------------------end-scrollbar------------------------*/
+/*------------------end-scrollbar------------------------
