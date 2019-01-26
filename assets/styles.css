@@ -96,7 +96,8 @@ a {
 	display: flex;
 	width: 100% !important;
 	height: 100%;
-	background: rgba(9,21,52,0.85);
+	/*background: rgba(9,21,52,0.80);*/
+	background: rgba(9,21,52,0.70);
 	/*---*/
 	-webkit-transition: background 0.5s; /* Safari */
   	transition: background 0.5s;
