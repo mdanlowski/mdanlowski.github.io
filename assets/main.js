@@ -26,7 +26,8 @@ function slideInTile(obj, event) {
 	   	objx.style.opacity = 1;
 	}
 	clicks++;
-	if (clicks == 5) document.querySelector('.reveal-all').innerText = 'HIDE ALL';
+	// console.log(clicks)
+	if (clicks > 4) document.querySelector('.reveal-all').innerText = 'HIDE ALL';
 }
 
 function slideOutTile(obj, event) {
@@ -40,6 +41,7 @@ function slideOutTile(obj, event) {
 		}
 	}
 	clicks--;
+	// console.log(clicks)
 	if (!clicks) document.querySelector('.reveal-all').innerText = 'REVEAL ALL';
 }
 
@@ -63,6 +65,8 @@ document.addEventListener('mousewheel', function(event){
 
 
 function revealAll(obj, e){
+	// clicks = 0;
+	console.log(clicks)
 	if (obj.innerText.includes('REVEAL')) {
 		for (var elem of document.querySelectorAll('.box-overlay')){
 			elem.click();
