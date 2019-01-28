@@ -65,8 +65,8 @@ document.addEventListener('mousewheel', function(event){
 
 
 function revealAll(obj, e){
-	// clicks = 0;
-	console.log(clicks)
+	clicks = 0;
+	// console.log(clicks)
 	if (obj.innerText.includes('REVEAL')) {
 		for (var elem of document.querySelectorAll('.box-overlay')){
 			elem.click();

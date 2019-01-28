@@ -6,8 +6,10 @@
 	<title>My Online Portfolio</title>
 	<meta charset="Unicode">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 	<link rel="stylesheet" type="text/css" href="assets/styles.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
     <script type="text/javascript" src="assets/main.js"></script>
 
@@ -17,7 +19,13 @@
 <body>
 	<div id="root">
 		<div class="toggleasc" onclick="document.getElementById('TASC').click()">
-			<input id="TASC" unchecked type="checkbox" name="autoscroll">Toggle Autoscroll (Spacebar)
+			<input hidden id="TASC" unchecked type="checkbox" name="autoscroll">Toggle Autoscroll (Spacebar)
+		</div>
+		<div class="contact">
+			marcin danlowski
+			 | <i class="fab fa-linkedin-in" onclick="window.open('https://linkedin.com/in/mdanlowski');"></i>
+			 | <i class="fab fa-github" onclick="window.open('https://github.com/mdanlowski');"></i>
+			 <!-- | <i class="fab fa-github io" onclick="window.open('https://mdanlowski.github.io');" ></i> -->
 		</div>
 		<div class="responsive-wrapper">
 			<div class="grid-wrapper">
@@ -178,7 +186,8 @@
 						</div>
 
 					</div>
-					<div class="box-overlay darkened" onclick="slideInTile(this, event);">
+					<div class="box-overlay darkened" onclick="slideInTile(thiAcc13813875
+					s, event);">
 						<div class="proj-descr">
 							<p>
 								<a href="fcc-quote-machine"> Random Quote Machine &#129157;</a>
@@ -200,6 +209,13 @@
 	</div>
 
 <div class="reveal-all text-center" onclick="revealAll(this, event);">REVEAL ALL</div>
+
+
+<!-- <div id="bottom-container">
+	
+window.scrollBy
+</div> -->
+
 
 </body>
 
