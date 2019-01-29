@@ -3,6 +3,7 @@ var x;
 var clicks = 0;
 var autoScrollRate = 1.5;
 var wheelScrollRate = 0.4;
+var tileCount = 6;
 
 function handleMouse(e) {
   if (x && document.getElementById('TASC').checked) {
@@ -27,7 +28,7 @@ function slideInTile(obj, event) {
 	}
 	clicks++;
 	// console.log(clicks)
-	if (clicks > 4) document.querySelector('.reveal-all').innerText = 'HIDE ALL';
+	if (clicks >= tileCount) document.querySelector('.reveal-all').innerText = 'HIDE ALL';
 }
 
 function slideOutTile(obj, event) {
@@ -82,3 +83,15 @@ function revealAll(obj, e){
 		obj.innerText = 'REVEAL ALL';
 	}
 }
+
+// remove Linux unfriendly arrows from the links and underline as a substitute
+document.addEventListener('DOMContentLoaded', function(){
+	if (!navigator.userAgent.includes("Windows")) {
+		var removeIcons = document.querySelectorAll('.proj-descr > p > a');
+		for(var objy of removeIcons){
+			var t = objy.innerText;
+			objy.innerText = t.substr(0, t.length-2);
+			objy.style.textDecoration = "underline";
+		}
+	}
+});

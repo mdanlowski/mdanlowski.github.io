@@ -3,226 +3,271 @@
 
 <head>
 	<!-- design by mdanlowski -->
+	<!-- minimum screen width = 320px -->
+	<!-- minimum optimal screen width = 375px -->
 	<title>My Online Portfolio</title>
-	<meta charset="Unicode">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<link rel="stylesheet" type="text/css" href="assets/styles.css">
-    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-
-    <script type="text/javascript" src="assets/main.js"></script>
-
+	
+	<script type="text/javascript" src="assets/main.js"></script>
+	
 	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 </head>
 
 <body>
-
-<div id="top-section">
-	<div id="root">
-		<nav class="nav-static">
-			<div class="toggleasc" onclick="document.getElementById('TASC').click()">
-				<input hidden id="TASC" unchecked type="checkbox" name="autoscroll">Toggle Autoscroll (Spacebar)
-			</div>
-			<div class="reveal-all text-center" onclick="revealAll(this, event);">REVEAL ALL</div>
-			<div class="contact">
-				marcin danlowski
-				 | <i class="fab fa-linkedin-in" onclick="window.open('https://linkedin.com/in/mdanlowski');"></i>
-				 | <i class="fab fa-github" onclick="window.open('https://github.com/mdanlowski');"></i>
-				 <!-- | <i class="fab fa-github io" onclick="window.open('https://mdanlowski.github.io');" ></i> -->
-			</div>
-		</nav>
-
-		<div class="responsive-wrapper">
-			<div class="grid-wrapper">
-				<!-- PROJECT SLOT 1 -->
-				<div class="project-box proj p1">
-					<div class="slidein-details" onclick="slideOutTile(this, event);">
-						<div class="details-grid">
-							<div class="details-grid-element"></div>
-							<div class="details-grid-element" onclick="window.open('http://rails-blog-md.herokuapp.com/');">
-								Open Heroku App 
-							</div>
-							<div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/simple_blog');">
-								Open Code Repository
-							</div>
-							<div class="details-grid-element">
-								<ul>
-									<li>____ JAN 2019 ____</li>
-									<li>PostgreSQL</li>
-									<li>Sass/SCSS</li>
-									<li>ActiveStorage (GCS)</li>
-									<li>RWD [███░░░░░░░]</li>
-									<li>Individual design</li>
-									<li>Posts rating system</li>
-									<li>Great fun making!</li>
-								</ul>
-
-							</div>
-						</div>
-
-					</div>
-					<div class="box-overlay" onclick="slideInTile(this, event);">
-						<div class="proj-descr">
-							<p>
-								<a href="http://rails-blog-md.herokuapp.com/"> Simple Blog Project &#129157;</a>
-							</p>
-							<p>Ruby on Rails</p>
-						</div>
-					</div>
+	
+	<div id="top-section">
+		<div id="root">
+			<nav class="nav-static">
+				
+				<span class="d-none d-md-block"><div class="toggleasc" onclick="document.getElementById('TASC').click()">
+					<input hidden id="TASC" unchecked type="checkbox" name="autoscroll">Toggle Autoscroll (Spacebar)
+				</div></span>
+				<div class="reveal-all" onclick="revealAll(this, event);">REVEAL ALL</div>
+				<div class="contact">
+					m<span class="d-none d-md-inline">arcin </span>danlowski
+					| <i class="fab fa-linkedin-in" onclick="window.open('https://linkedin.com/in/mdanlowski');"></i>
+					| <i class="fab fa-github" onclick="window.open('https://github.com/mdanlowski');"></i>
+					<!-- | <i class="fab fa-github io" onclick="window.open('https://mdanlowski.github.io');" ></i> -->
 				</div>
-				<!-- PROJECT SLOT 2 -->
-				<div class="project-box proj p2">
-					<div class="slidein-details" onclick="slideOutTile(this, event);">
-						<div class="details-grid">
-							<div class="details-grid-element"></div>
-							<div class="details-grid-element" onclick="window.open('http://anonquotes.herokuapp.com/');">
-								Open Heroku App
+			</nav>
+			
+			<div class="responsive-wrapper">
+				<div class="grid-wrapper">
+					<!-- PROJECT SLOT 1 -->
+					<div class="project-box proj p1">
+						<div class="slidein-details" onclick="slideOutTile(this, event);">
+							<div class="details-grid">
+								<div class="details-grid-element"></div>
+								<div class="details-grid-element" onclick="window.open('http://rails-blog-md.herokuapp.com/');">
+									Open Heroku App 
+								</div>
+								<div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/simple_blog');">
+									Open Code Repository
+								</div>
+								<div class="details-grid-element">
+									<ul>
+										<li>____ JAN 2019 ____</li>
+										<li>PostgreSQL</li>
+										<li>Sass/SCSS</li>
+										<li>ActiveStorage (GCS)</li>
+										<li>RWD [███░░░░░░░]</li>
+										<li>Individual design</li>
+										<li>Posts rating system</li>
+										<li>Great fun making!</li>
+									</ul>
+									
+								</div>
 							</div>
-							<div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/rails/tree/master/Proto');">
-								Open Code Repository
+							
+						</div>
+						<div class="box-overlay" onclick="slideInTile(this, event);">
+							<div class="proj-descr">
+								<p>
+									<a href="http://rails-blog-md.herokuapp.com/"> Simple Blog Project &#129157;</a>
+								</p>
+								<p>Ruby on Rails</p>
 							</div>
-							<div class="details-grid-element">
-								<ul>
-									<li>____ AUG 2018 ____</li>
-									<li>My First Rails App</li>
-									<li>First Heroku Deploy</li>
-									<li>Learned the MVC</li>
-									<li>Pagination added</li>
-									<li>RWD [████████░░]</li>
-								</ul>
+						</div>
+					</div>
+					<!-- PROJECT SLOT 2 -->
+					<div class="project-box proj p2">
+						<div class="slidein-details" onclick="slideOutTile(this, event);">
+							<div class="details-grid">
+								<div class="details-grid-element"></div>
+								<div class="details-grid-element" onclick="window.open('http://anonquotes.herokuapp.com/');">
+									Open Heroku App
+								</div>
+								<div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/rails/tree/master/Proto');">
+									Open Code Repository
+								</div>
+								<div class="details-grid-element">
+									<ul>
+										<li>____ AUG 2018 ____</li>
+										<li>My First Rails App</li>
+										<li>First Heroku Deploy</li>
+										<li>Learned the MVC</li>
+										<li>Pagination added</li>
+										<li>RWD [████████░░]</li>
+									</ul>
+									
+								</div>
+							</div>
+							
+						</div>
+						<div class="box-overlay" onclick="slideInTile(this, event);">
+							<div class="proj-descr">
+								<p>
+									<a href="http://anonquotes.herokuapp.com/"> Anonymous Quote Bin &#129157;</a>
+								</p>
+								<p>Ruby on Rails</p>
+							</div>
+						</div>
+						
+					</div>
+					
+					<!-- PROJECT SLOT 3 -->
+					<div class="project-box proj p3">
+						<div class="slidein-details" onclick="slideOutTile(this, event);">
+							<div class="details-grid anim-sequence">
+								<div class="details-grid-element"></div>
+								<div class="details-grid-element" onclick="window.open('http://socketpaint.herokuapp.com/')">Open Heroku App</div>
+								<div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/nodejs/tree/master/sockets')">Open Code Repository</div>
+								<div class="details-grid-element">
+									<ul>
+										<li>____ DEC 2018 ____</li>
+										<li>Node App</li>
+										<li>Using p5.js</li>
+										<li>WebSockets</li>
+										<li>Draw together</li>
+										<li>And chat :)</li>
+									</ul>
+								</div>
+							</div>
+							
+						</div>
+						<!-- <div class="box-overlay darkened" onclick="slideInTile(this, event);"> -->
+							<div class="box-overlay darkened" onclick="slideInTile(this, event);">
+								<div class="proj-descr">
+									<p>
+										<a href="https://socketpaint.herokuapp.com/"> Paint & Chat Collab &#129157;</a>
+									</p>
+									<p>Node.js</p>
+								</div>
+							</div>
+						</div>
+						
+						<!-- PROJECT SLOT 4 -->
+						<div class="project-box proj p4">
+							<div class="slidein-details" onclick="slideOutTile(this, event);">
+								<div class="details-grid">
+									<div class="details-grid-element"></div>
+									<div class="details-grid-element" onclick="window.open('http://mdanlowski.github.io/shooter')">Go to the App</div>
+									<div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/mdanlowski.github.io/tree/master/shooter')">Show the Repo</div>
+									<div class="details-grid-element">
+										<ul>
+											<li>____ MAY 2018 ____</li>
+											<li>p5.js Canvas Game</li>
+											<li>Designed in OOP</li>
+											<li>Much fun doing vector_</li>
+											<li>_math behind shooting</li>
+											<li>Debug data eveywhere :D</li>
+											<li>Work progress:</li>
+											<li>[██░░░░░░░░]</li>
+										</ul>
+									</div>
+								</div>
 								
 							</div>
+							<div class="box-overlay darkened" onclick="slideInTile(this, event);">
+								<div class="proj-descr">
+									<p>
+										<a href="shooter"> JS Shooter Prototype &#129157;</a>
+									</p>
+									<p>JavaScript (p5.js)</p>
+								</div>
+							</div>
 						</div>
-
-					</div>
-					<div class="box-overlay" onclick="slideInTile(this, event);">
-						<div class="proj-descr">
-							<p>
-								<a href="http://anonquotes.herokuapp.com/"> Anonymous Quote Store &#129157;</a>
-							</p>
-							<p>Ruby on Rails</p>
+						
+						<!-- PROJECT SLOT 5 -->
+						<div class="project-box proj p5">
+							<div class="slidein-details" onclick="slideOutTile(this, event);">
+								<div class="details-grid">
+									<div class="details-grid-element"></div>
+									<div class="details-grid-element" onclick="window.open('http://mdanlowski.github.io/fcc-quote-machine')">Go to the App</div>
+									<div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/mdanlowski.github.io/tree/master/fcc-quote-machine')">Show the Repo</div>
+									<div class="details-grid-element">
+										<ul>
+											<li>____ DEC 2017 ____</li>
+											<li>Simple bootstrap page</li>
+											<li>One of first projects</li>
+											<li>Full Viewport Header</li>
+											<li>Used Wikiquotes API_</li>
+											<li>_to pull quotes</li>
+											<li>Used Twitter API_</li>
+											<li>_to publish a quote</li>
+										</ul>
+									</div>
+								</div>
+								
+							</div>
+							<div class="box-overlay darkened" onclick="slideInTile(this, event);">
+								<div class="proj-descr">
+									<p>
+										<a href="fcc-quote-machine"> Random Quote Machine &#129157;</a>
+									</p>
+									<p>WikiQuotes, Twitter APIs</p>
+								</div>
+								
+							</div>
+							
+						</div>
+						
+						<!-- PROJECT SLOT 6 - temporary for other projects -->
+						<div class="project-box proj p6">
+							<div class="slidein-details" onclick="slideOutTile(this, event);">
+								<div class="details-grid">
+									<div class="details-grid-element">
+										
+									</div>
+									<div class="details-grid-element">
+										<ul>
+											<li>____ Other Projects ____</li>
+											<li>> <a href="fcc-tribute-page">My first Bootstrap page</a></li>
+											<li>> <a href="fcc-portfolio">Long ago - YetAnotherBootstrapPage</a></li>
+											
+										</ul>
+									</div>
+									<div class="details-grid-element">
+										<a href="http://url-shorty-md.herokuapp.com/">[!] Rails URL Shorting App</a>
+									</div>
+									<div class="details-grid-element">
+										<!-- <ul>
+											<li>____ Other Projects ____</li>
+											<li>Simple bootstrap page</li>
+											<li>One of first projects</li>
+											
+										</ul> -->
+									</div>
+								</div>
+								
+							</div>
+							<div class="box-overlay darkened" onclick="slideInTile(this, event);">
+								<div class="proj-descr">
+									<p>
+										<a href="#">  Other Projects  &#129157;</a>
+									</p>
+									<p><strong>Various Tech</strong></p>
+								</div>
+								
+							</div>
+							
 						</div>
 					</div>
 					
-				</div>
-
-				<!-- PROJECT SLOT 3 -->
-				<div class="project-box proj p3">
-					<div class="slidein-details" onclick="slideOutTile(this, event);">
-						<div class="details-grid anim-sequence">
-							<div class="details-grid-element"></div>
-							<div class="details-grid-element" onclick="window.open('http://socketpaint.herokuapp.com/')">Open Heroku App</div>
-							<div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/nodejs/tree/master/sockets')">Open Code Repository</div>
-							<div class="details-grid-element">
-								<ul>
-									<li>____ DEC 2018 ____</li>
-									<li>Node App</li>
-									<li>Using p5.js</li>
-									<li>WebSockets</li>
-									<li>Draw together</li>
-									<li>And chat :)</li>
-								</ul>
-							</div>
-						</div>
-
-					</div>
-					<!-- <div class="box-overlay darkened" onclick="slideInTile(this, event);"> -->
-					<div class="box-overlay darkened" onclick="slideInTile(this, event);">
-						<div class="proj-descr">
-							<p>
-								<a href="https://socketpaint.herokuapp.com/"> Paint & Chat Collab &#129157;</a>
-							</p>
-							<p>Node.js</p>
-						</div>
-					</div>
-				</div>
-
-				<!-- PROJECT SLOT 4 -->
-				<div class="project-box proj p4">
-					<div class="slidein-details" onclick="slideOutTile(this, event);">
-						<div class="details-grid">
-							<div class="details-grid-element"></div>
-							<div class="details-grid-element" onclick="window.open('http://mdanlowski.github.io/shooter')">Go to the App</div>
-							<div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/mdanlowski.github.io/tree/master/shooter')">Show the Repo</div>
-							<div class="details-grid-element">
-								<ul>
-									<li>____ MAY 2018 ____</li>
-									<li>p5.js Canvas Game</li>
-									<li>Designed in OOP</li>
-									<li>Much fun doing vector_</li>
-									<li>_math behind shooting</li>
-									<li>Debug data eveywhere :D</li>
-									<li>Work progress:</li>
-									<li>[██░░░░░░░░]</li>
-								</ul>
-							</div>
-						</div>
-
-					</div>
-					<div class="box-overlay darkened" onclick="slideInTile(this, event);">
-						<div class="proj-descr">
-							<p>
-								<a href="shooter"> JS Shooter Prototype &#129157;</a>
-							</p>
-							<p>JavaScript (p5.js)</p>
-						</div>
-					</div>
-				</div>
-
-				<!-- PROJECT SLOT 5 -->
-				<div class="project-box proj p5">
-					<div class="slidein-details" onclick="slideOutTile(this, event);">
-						<div class="details-grid">
-							<div class="details-grid-element"></div>
-							<div class="details-grid-element" onclick="window.open('http://mdanlowski.github.io/fcc-quote-machine')">Go to the App</div>
-							<div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/mdanlowski.github.io/tree/master/fcc-quote-machine')">Show the Repo</div>
-							<div class="details-grid-element">
-								<ul>
-									<li>____ DEC 2017 ____</li>
-									<li>Simple bootstrap page</li>
-									<li>One of first projects</li>
-									<li>Full Viewport Header</li>
-									<li>Used Wikiquotes API_</li>
-									<li>_to pull quotes</li>
-									<li>Used Twitter API_</li>
-									<li>_to publish a quote</li>
-								</ul>
-							</div>
-						</div>
-
-					</div>
-					<div class="box-overlay darkened" onclick="slideInTile(this, event);">
-						<div class="proj-descr">
-							<p>
-								<a href="fcc-quote-machine"> Random Quote Machine &#129157;</a>
-							</p>
-							<p>WikiQuotes, Twitter APIs</p>
-						</div>
-
+					<div class="footer">
+						
 					</div>
 					
 				</div>
-			</div>
-
-			<div class="footer">
 				
 			</div>
-
+			
+			
 		</div>
-
-	</div>
-
-
-</div>
-<!-- <div id="bottom-container">
+		
+		<!-- <div id="bottom-section">
+			
+			use window.scrollBy
+		</div> -->
+		
+		
+	</body>
 	
-window.scrollBy
-</div> -->
-
-
-</body>
-
-<!-- <script src="assets/script.js"></script> -->
-
-</html>
+	<!-- <script src="assets/script.js"></script> -->
+	
+	</html>
