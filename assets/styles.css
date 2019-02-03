@@ -398,30 +398,21 @@ a {
 
 /*-66666666666666666666666666666666666666666-*/
 
-.p6 .details-grid-element {
-	background-color: #000000ec; 
-	/*background-color: #091534eF;*/
-}
-
-.p6 .details-grid-element:nth-child(1), .p6 .details-grid-element:nth-child(3) {
-	text-align: center;
-	line-height: 200px;
-	font-weight: bold;
-}
-/* SAME AS TILES 1 AND 2 BUT IN CASE I WANTED TO CHANGE THAT SOON... */
-.p6 .details-grid-element:nth-child(1):hover, .p6 .details-grid-element:nth-child(3):hover, .p6 .details-grid-element:nth-child(4):hover {
-	color: black;
-	background-color: darkred;
-}
-
-.p6 .details-grid-element:nth-child(1), .p6 .details-grid-element:nth-child(4) {
-	background: url('img/soon.png');
+.p6 .other-projects-tile {
 	background-color: #000000ec;
-	background-size: 85%;
-	background-position: center;
-	background-repeat: no-repeat;
+	display: block !important;
+	/*color: */
+	overflow-y: scroll;
 }
-
+.p6 .other-projects-tile ul {
+	padding-top: 20px;
+}
+.p6 .other-projects-tile ul li {
+	list-style: none;
+}
+.p6 .other-projects-tile ul li:hover {
+	color: crimson;
+}
 
 .nav-static {
 	position: fixed;
@@ -446,6 +437,7 @@ a {
 /* width */
 ::-webkit-scrollbar {
   height: 8px;
+  width: 8px;
 }
 /* Track */
 ::-webkit-scrollbar-track {
