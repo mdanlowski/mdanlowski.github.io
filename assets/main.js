@@ -52,8 +52,34 @@ document.onmousemove = handleMouse;
 
 // switch horizontal scroll with space as well
 document.addEventListener('keydown', function(e){
-	// console.log(e.code);
+	console.log(e.code);
 	if (e.code == 'Space') document.getElementById('TASC').click();
+	else if (e.code == 'ArrowUp'){
+		
+		if (window.location.href.endsWith('.io') || window.location.href.includes('#projects-section')) {
+			//pass
+		}//1 ^
+		if(window.location.href.includes('#cv-section')){
+			document.querySelector('a[href="#projects-section"]').click();
+		}//2 ^
+		else if (window.location.href.includes('#about-section')) {
+			document.querySelector('a[href="#cv-section"]').click();
+		}//3 ^
+		
+	}
+	else if (e.code == 'ArrowDown') {
+		
+		if (window.location.href.endsWith('.io') || window.location.href.includes('#projects-section')) {
+			document.querySelector('a[href="#cv-section"]').click();
+		}//1 v
+		else if(window.location.href.includes('#cv-section')){
+			document.querySelector('a[href="#about-section"]').click();
+		}//2 v
+		else if (window.location.href.includes('#about-section')) {
+			document.querySelector('a[href="#@TODO-SECTION"]').click();
+		}//3 v
+		
+	}
 });
 
 

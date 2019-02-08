@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "tabsFont";
+    src: url("OCR A Std.ttf");
+}
+
+
+#cv-section {
+	background-color: #9E1030;
+	height: 100vh;
+	width: 100%;
+	
+	padding: 30px;
+	
+	/*display: grid;*/
+	grid-template-columns: 25% 25% 45%;
+	grid-template-rows: 90%;
+	grid-gap: 10px;
+	
+	align-content: center;
+	justify-content: center;
+}
+
+#about-section {
+	background-color: #091534;
+	height: 100vh;
+	width: 100%;
+	
+	padding: 30px;
+	
+	/*display: grid;*/
+	grid-template-columns: 44% 44%;
+	grid-template-rows: 80%;
+	grid-gap: 10px;
+	
+	align-content: center;
+	justify-content: center;
+}
+
+.corner-nav.cn2 {
+	bottom: calc(-100vh + 5px) !important;
+}
+.corner-nav.cn3 {
+	bottom: calc(-200vh + 5px) !important;
+}
+
+.cv-subsection {
+	border: 2px solid rgba(9,21,52,1);
+	color: rgba(9,21,52,1);
+}
+.cv-subsection h1 {
+	font-family: 'tabsFont';
+	/*text-transform: uppercase;*/
+}
+
+
+.cv-panel {
+	height: 100%;
+	color: white;
+	padding: 30px;
+}
+.cv-list {
+	height: 90%;
+	overflow-y: scroll;
+}
+
+.cv-panel p {
+	padding-top: 30px;
+	text-align: center;	
+}
+
+.cv-panel ul {
+	margin-left: 0;
+}
+
+#my-photo {
+	max-width: 300px;
+	/*border-radius: 50%;*/
+}
