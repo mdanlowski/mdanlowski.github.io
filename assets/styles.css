@@ -32,9 +32,12 @@ html {
 		padding: 10% 0% 10% 0%;
 	}
 	.grid-wrapper {
+		/*when more projects:*/
+		/*grid-template-columns: repeat(3, 400px);
+		grid-template-rows: 400px 400px;*/
 		grid-template-columns: repeat(6, 400px);
 		grid-template-rows: 400px;
-		overflow-x: scroll;
+		overflow-x: hidden;
 		overflow-y: hidden;
 
 		/*opacity: 0.2;*/
@@ -154,7 +157,9 @@ a {
 	/* opacity: 0; */
 	display: grid;
 	grid-gap: 10px;
-
+}
+.grid-wrapper:hover {
+	overflow-x: scroll;
 }
 
 .project-box {
@@ -181,20 +186,20 @@ a {
 	width: 100% !important;
 	height: 100%;
 	/*background: rgba(9,21,52,0.80);*/
-	background: rgba(9,21,52,0.70);
+	background: rgba(9,21,52,0.5);
 	/*---*/
 	-webkit-transition: background 0.5s; /* Safari */
   	transition: background 0.5s;
 }
 .darkened {
-	background: rgba(9,21,52,0.90);
+	background: rgba(9,21,52,0.80);
 }
 
 .box-overlay:hover {
-	background: rgba(9,21,52,0.3);
+	background: rgba(9,21,52,0.2);
 }
 .darkened:hover {
-	background: rgba(9,21,52,0.6);
+	background: rgba(9,21,52,0.3);
 }
 
 

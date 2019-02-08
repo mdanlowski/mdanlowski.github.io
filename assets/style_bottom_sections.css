@@ -57,10 +57,21 @@
 	height: 100%;
 	color: white;
 	padding: 30px;
+	
+}
+.left-scroll {
+	height: 90%;
+	direction: rtl;
+	overflow-y: hidden;
+	padding-left: 8px !important;
+}
+.left-scroll:hover {
+	overflow-y: scroll;
+	padding-left: 0px !important;
 }
 .cv-list {
+	direction: ltr;
 	height: 90%;
-	overflow-y: scroll;
 }
 
 .cv-panel p {
