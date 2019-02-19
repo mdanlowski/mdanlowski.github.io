@@ -2,371 +2,366 @@
 <html lang="en">
 
 <head>
-	<!-- design by mdanlowski -->
-	<!-- minimum screen width = 320px -->
-	<!-- minimum optimal screen width = 375px -->
-	<title>My Online Portfolio</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<link rel="stylesheet" type="text/css" href="assets/styles.css">
-	<link rel="stylesheet" type="text/css" href="assets/style_bottom_sections.css">
-	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-	
-	<script type="text/javascript" src="assets/main.js"></script>
-	<!-- <script type="text/javascript" src="assets/sketch.js"></script> -->
-	
-	<!-- <script language="javascript" type="text/javascript" src="shooter/libraries/p5.js"></script> -->
-	
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+  <!-- design by mdanlowski -->
+  <!-- minimum screen width = 320px -->
+  <!-- minimum optimal screen width = 375px -->
+  <title>My Online Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" type="text/css" href="assets/styles.css">
+  <link rel="stylesheet" type="text/css" href="assets/style_bottom_sections.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  
+  <script type="text/javascript" src="assets/main.js"></script>
+  <!-- <script type="text/javascript" src="assets/sketch.js"></script> -->
+  
+  <!-- <script language="javascript" type="text/javascript" src="shooter/libraries/p5.js"></script> -->
+  
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 </head>
 
 <body>
-	<!-- @TODO SWAP CV-S and ABOUT-S -> Known Technologies in About -->
-	<div id="projects-section">
-		<div id="root">
-			<nav class="nav-static">
-				
-				<span class="d-none d-md-block"><div class="toggleasc" onclick="document.getElementById('TASC').click()">
-					<input hidden id="TASC" unchecked type="checkbox" name="autoscroll">Toggle Autoscroll (Spacebar)
-				</div></span>
-				<div class="reveal-all" onclick="revealAll(this, event);">REVEAL ALL</div>
-				<div class="contact">
-					<a href="#cv-section">m<span class="d-none d-md-inline">arcin </span>danlowski</a>
-					| <i class="fab fa-linkedin-in" onclick="window.open('https://linkedin.com/in/mdanlowski');"></i>
-					| <i class="fab fa-github" onclick="window.open('https://github.com/mdanlowski');"></i>
-					<!-- | <i class="fab fa-github io" onclick="window.open('https://mdanlowski.github.io');" ></i> -->
-					
-				</div>
-				
-			</nav>
-			<div class="corner-nav cn1">
-				<a href="#cv-section">▼</a>
-				<!-- <a href="#projects-section">▲</a> -->
-			</div>
-			<!-- @TODO :: MAKE IT DYNAMIC! - JS class template to fill with JSON data w/ Firebase -->
-			<div class="responsive-wrapper">
-				<div class="grid-wrapper">
-					<!-- PROJECT SLOT 1 -->
-					<div class="project-box proj p1">
-						<div class="slidein-details" onclick="slideOutTile(this, event);">
-							<div class="details-grid">
-								<div class="details-grid-element"></div>
-								<div class="details-grid-element" onclick="window.open('http://rails-blog-md.herokuapp.com/');">
-									Open Heroku App 
-								</div>
-								<div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/simple_blog');">
-									Open Code Repository
-								</div>
-								<div class="details-grid-element">
-									<ul>
-										<li>____ JAN 2019 ____</li>
-										<li>PostgreSQL</li>
-										<li>Sass/SCSS</li>
-										<li>ActiveStorage (GCS)</li>
-										<li>RWD [███░░░░░░░]</li>
-										<li>Individual design</li>
-										<li>Posts rating system</li>
-										<li>Great fun making!</li>
-									</ul>
-									
-								</div>
-							</div>
-							
-						</div>
-						<div class="box-overlay" onclick="slideInTile(this, event);">
-							<div class="proj-descr">
-								<p>
-									<a href="http://rails-blog-md.herokuapp.com/"> Simple Blog Project &#129157;</a>
-								</p>
-								<p>Ruby on Rails</p>
-							</div>
-						</div>
-					</div>
-					<!-- PROJECT SLOT 2 -->
-					<div class="project-box proj p2">
-						<div class="slidein-details" onclick="slideOutTile(this, event);">
-							<div class="details-grid">
-								<div class="details-grid-element"></div>
-								<div class="details-grid-element" onclick="window.open('http://anonquotes.herokuapp.com/');">
-									Open Heroku App
-								</div>
-								<div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/rails/tree/master/Proto');">
-									Open Code Repository
-								</div>
-								<div class="details-grid-element">
-									<ul>
-										<li>____ AUG 2018 ____</li>
-										<li>My First Rails App</li>
-										<li>First Heroku Deploy</li>
-										<li>Learned the MVC</li>
-										<li>Pagination added</li>
-										<li>RWD [████████░░]</li>
-									</ul>
-									
-								</div>
-							</div>
-							
-						</div>
-						<div class="box-overlay" onclick="slideInTile(this, event);">
-							<div class="proj-descr">
-								<p>
-									<a href="http://anonquotes.herokuapp.com/"> Anonymous Quote Bin &#129157;</a>
-								</p>
-								<p>Ruby on Rails</p>
-							</div>
-						</div>
-						
-					</div>
-					
-					<!-- PROJECT SLOT 3 -->
-					<div class="project-box proj p3">
-						<div class="slidein-details" onclick="slideOutTile(this, event);">
-							<div class="details-grid anim-sequence">
-								<div class="details-grid-element"></div>
-								<div class="details-grid-element" onclick="window.open('http://socketpaint.herokuapp.com/')">Open Heroku App</div>
-								<div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/nodejs/tree/master/sockets')">Open Code Repository</div>
-								<div class="details-grid-element">
-									<ul>
-										<li>____ DEC 2018 ____</li>
-										<li>Node App</li>
-										<li>Using p5.js</li>
-										<li>WebSockets</li>
-										<li>Draw together</li>
-										<li>And chat :)</li>
-									</ul>
-								</div>
-							</div>
-							
-						</div>
-						<!-- <div class="box-overlay darkened" onclick="slideInTile(this, event);"> -->
-							<div class="box-overlay darkened" onclick="slideInTile(this, event);">
-								<div class="proj-descr">
-									<p>
-										<a href="https://socketpaint.herokuapp.com/"> Paint & Chat Collab &#129157;</a>
-									</p>
-									<p>Node.js</p>
-								</div>
-							</div>
-						</div>
-						
-						<!-- PROJECT SLOT 4 -->
-						<div class="project-box proj p4">
-							<div class="slidein-details" onclick="slideOutTile(this, event);">
-								<div class="details-grid">
-									<div class="details-grid-element"></div>
-									<div class="details-grid-element" onclick="window.open('http://mdanlowski.github.io/shooter')">Go to the App</div>
-									<div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/mdanlowski.github.io/tree/master/shooter')">Show the Repo</div>
-									<div class="details-grid-element">
-										<ul>
-											<li>____ MAY 2018 ____</li>
-											<li>p5.js Canvas Game</li>
-											<li>Designed in OOP</li>
-											<li>Much fun doing vector_</li>
-											<li>_math behind shooting</li>
-											<li>Debug data eveywhere :D</li>
-											<li>Work progress:</li>
-											<li>[██░░░░░░░░]</li>
-										</ul>
-									</div>
-								</div>
-								
-							</div>
-							<div class="box-overlay darkened" onclick="slideInTile(this, event);">
-								<div class="proj-descr">
-									<p>
-										<a href="shooter"> JS Shooter Prototype &#129157;</a>
-									</p>
-									<p>JavaScript (p5.js)</p>
-								</div>
-							</div>
-						</div>
-						
-						<!-- PROJECT SLOT 5 -->
-						<div class="project-box proj p5">
-							<div class="slidein-details" onclick="slideOutTile(this, event);">
-								<div class="details-grid">
-									<div class="details-grid-element"></div>
-									<div class="details-grid-element" onclick="window.open('http://mdanlowski.github.io/fcc-quote-machine')">Go to the App</div>
-									<div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/mdanlowski.github.io/tree/master/fcc-quote-machine')">Show the Repo</div>
-									<div class="details-grid-element">
-										<ul>
-											<li>____ DEC 2017 ____</li>
-											<li>Simple bootstrap page</li>
-											<li>One of first projects</li>
-											<li>Full Viewport Header</li>
-											<li>Used Wikiquotes API_</li>
-											<li>_to pull quotes</li>
-											<li>Used Twitter API_</li>
-											<li>_to publish a quote</li>
-										</ul>
-									</div>
-								</div>
-								
-							</div>
-							<div class="box-overlay darkened" onclick="slideInTile(this, event);">
-								<div class="proj-descr">
-									<p>
-										<a href="fcc-quote-machine"> Random Quote Machine &#129157;</a>
-									</p>
-									<p>WikiQuotes, Twitter APIs</p>
-								</div>
-								
-							</div>
-							
-						</div>
-						
-						<!-- PROJECT SLOT 6 - temporary for other projects -->
-						<div class="project-box proj p6">
-							<div class="slidein-details" onclick="slideOutTile(this, event);">
-								<div class="details-grid other-projects-tile">
-									<ul>
-										<li class="text-center"> ________ Other Projects ________ </li>
-										<!-- @TODO swap with API or Shooter or add another tile -->
-										<li>-> <a  href="http://url-shorty-md.herokuapp.com/">Rails URL Shorting App</a></li>
-										<li>-> <a  href="javascript:alert('comming soon!')">TODOExplorer - a Python code crawler</a></li>
-										<li>-> <a  href="javascript:alert('comming soon!')">Prettyfication - An Alert() Alternative</a></li>
-										<li>-> <a  href="fcc-tribute-page">My first Bootstrap page - Tribute</a></li>
-										<li>-> <a  href="fcc-portfolio">A /very/ old Bootstrap portfolio</a></li>
-										<!-- @TODO put all minor projects on codepen -->
-										<!-- <li>-> <a  href="javascript:alert('comming soon!')">Prettyfication - An Alert() Alternative</a></li> -->
-										<!-- <li>-> ...</li>
-										<li>
-											<img width="300px" src="assets/img/soon.png" class="img img-fluid rounded-circle">
-										</li>
-										 -->
-									</ul>
-								</div>
-								
-							</div>
-							<div class="box-overlay darkened" onclick="slideInTile(this, event);">
-								<div class="proj-descr">
-									<p>
-										<a href="#">  Other Projects  &#129157;</a>
-									</p>
-									<p><strong>Various Tech</strong></p>
-								</div>
-								
-							</div>
-							
-						</div>
-					</div>
-					
-					<div class="footer">
-						
-					</div>
-					
-				</div>
-				
-			</div>
-			
-			
-		</div>
-		
-		<div id="cv-section">
-					
-			
-			<div class="corner-nav cn2">
-					<a href="#projects-section">▲</a>
-					<a href="#about-section">▼</a>
-			</div>
-			
-			<div class="cv-subsection">
-				<h1>_about</h1>
-				<div class="cv-panel">
-					<div class="text-center">
-						<img id="my-photo" src="assets/img/mdski1.png">
-					</div>
-					
-					<p>
-					Bachelor of Engineering in Mechatronics; joined Accenture in Warsaw as my first professional position to take part in building and maintaining internet banking front-end (earlier core-banking). I'm a part of an international team in Agile environment. My focus in learning outside work are Ruby on Rails, Python and JavaScript (+ES6), I also have basic knowledge of C++ and Java. I enjoy building front-end very much, as it is quick to test and modify. Using Linux and Git every day. Aspiring for a full-stack.
-					</p>
-					
-				</div>
-			</div>
-			<div class="cv-subsection">
-				<h1>_education</h1>
-				
-				<div class="cv-panel">
-					<div class="cv-list">
-						<ul>
-						<li>BACHELOR OF ENGINEERING | 02.2018 | MILITARY UNIVERISTY OF TECHNOLOGY IN WARSAW | MECHATRONICS | Specialization: Industrial Automation and Control Systems, Robotics (GPA 4.36)</li>
-						<li>Introduction to Python for Data Science [CERTIFICATE NO. #3,522,257] | AUGUST 2017 | EDX.ORG/DATACAMP.COM</li>
-						<li>FULL STACK WEB DEV CERTIFICATE | IN PROGRESS | FREECODECAMP.COM</li>
-						<li>RUBY ON RAILS DEVELOPER PATH | IN PROGRESS | LINKEDIN LEARNING / UDEMY</li>
-						<li>LINUX FUNDAMENTALS | IN PROGRESS | edX.org</li>
-						<li>ECDL V5.0 CERTIFICATE [LICENSE PL-6174832] | APRIL 2015 | ECDL FOUNDATION</li>
-						<li>ECCC CS M2 CERTIFICATE (Computer Graphics) [LICENSE EAB-0012-B-3380] | SEP. 2011 | ECCC FOUNDATION</li>
-						</ul>
-					</div>
-				</div>
-				
-			</div>
-			<div class="cv-subsection">
-				<h1>_experience</h1>
-				
-				<div class="cv-panel">
-				  <div class="left-scroll">
-					<div class="cv-list">	
-<ul>FRONT-END / UX DEVELOPER | ACCENTURE | WARSAW | SEPTEMBER 2018 – NOW
-<li> Analysis of bugs and errors in the Banking Front-end</li>
-<li> Implementing bugfixes and corrections in code: HTML (.NET Core), CSS/LESS stylesheets, JavaScript</li>
-<li> Introducing minor fixes in graphics and design</li>
-<li> Responsible for assessment and assurance of the website accessibility according to WCAG standards</li>
-<li> Everyday use of Git and Bitbucket in code management</li>
-</ul>
-<ul>JUNIOR MAINFRAME PROGRAMMER | ACCENTURE | WARSAW | APRIL 2018 – AUGUST 2018
-<li> Worked as a member of an active, multinational Agile team</li>
-<li> Used COBOL and JCL to develop banking applications</li>
-<li> Analyzed and modified existing solutions to accommodate trending needs</li>
-<li> Took part in implementing mentioned systems in a newly forming banking instance</li>
-<li> Performed code peer-reviews</li>
-<li> Cooperated with testing team, took active part in Agile Demos and meetings with stakeholders and business partners</li>
-<li> Took active part in knowledge sharing meetings and self-development guilds</li>
-</ul>
-<ul>PROGRAMMING INSTRUCTOR (WEEKENDS) | WOWSCHOOL | WARSAW | SEPTEMBER 2017 - NOW
-<li> Teaching children and teenagers, introducing them to the programming world, increasing their interest and awareness of this field of education - the role helped me develop patience, public-speaking skills & dynamic approach to problems</li>
-<li> Presenting web technologies to teenagers under 17: HTML5, CSS3 (+Bootstrap), JavaScript (+popular libraries), GitHub, WordPress</li>
-<li> Teaching the basic principles of programming through fun & adventure – children under 13, using environments from MIT and Microsoft, as well as Python language</li>
-<li> Building an unconventional and enthusiastic educational environment.</li>
-</ul>
-<ul>INSTRUCTOR’S ASSISTANT | WOWSCHOOL | WARSAW | MARCH 2017 – JUNE 2017
-<li> Aiding in running classes and organizing events.</li>
-</ul>
-<ul>INTERN | Optoelectronics Institute | Military University of Technology
-<li>Research and technical works</li>
-<li>Examining properties of different electronic and optoelectronic components, emitters and sensors</li>
-<li>Experience with optic fiber transmitters, spectroscopes, oscilloscopes, signal generators and other measuring equipment</li>
-<li>Programming microcontroller-based applications with C/C++</li>
-</ul>
-					</div>
-				  </div>
+  <!-- @TODO SWAP CV-S and ABOUT-S -> Known Technologies in About -->
+<div id="root">
+<div id="projects-section">
+  <nav class="nav-static">
+    
+    <span class="d-none d-md-block"><div class="toggleasc" onclick="document.getElementById('TASC').click()">
+      <input hidden id="TASC" unchecked type="checkbox" name="autoscroll">Toggle Autoscroll (Spacebar)
+    </div></span>
+    <div class="reveal-all" onclick="revealAll(this, event);">REVEAL ALL</div>
+    <div class="contact">
+      <a href="#cv-section">m<span class="d-none d-md-inline">arcin </span>danlowski</a>
+      | <i class="fab fa-linkedin-in" onclick="window.open('https://linkedin.com/in/mdanlowski');"></i>
+      | <i class="fab fa-github" onclick="window.open('https://github.com/mdanlowski');"></i>
+      <!-- | <i class="fab fa-github io" onclick="window.open('https://mdanlowski.github.io');" ></i> -->
+      
+    </div>
+    
+  </nav>
+  <div class="corner-nav cn1">
+    <a href="#cv-section">▼</a>
+    <!-- <a href="#projects-section">▲</a> -->
+  </div>
+  <!-- @TODO :: MAKE IT DYNAMIC! - JS class template to fill with JSON data w/ Firebase -->
+  <div class="responsive-wrapper">
+    
+    <div class="grid-wrapper">
+      <!-- PROJECT SLOT 1 -->
+      <div class="project-box proj p1">
+        <div class="slidein-details" onclick="slideOutTile(this, event);">
+          <div class="details-grid">
+            <div class="details-grid-element"></div>
+            <div class="details-grid-element" onclick="window.open('http://rails-blog-md.herokuapp.com/');">
+              Open Heroku App 
+            </div>
+            <div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/simple_blog');">
+              Open Code Repository
+            </div>
+            <div class="details-grid-element">
+              <ul>
+                <li>____ JAN 2019 ____</li>
+                <li>PostgreSQL</li>
+                <li>Sass/SCSS</li>
+                <li>ActiveStorage (GCS)</li>
+                <li>RWD [███░░░░░░░]</li>
+                <li>Individual design</li>
+                <li>Posts rating system</li>
+                <li>Great fun making!</li>
+              </ul>
+              
+            </div>
+          </div>
+          
+        </div>
+        <div class="box-overlay" onclick="slideInTile(this, event);">
+          <div class="proj-descr">
+            <p>
+              <a href="http://rails-blog-md.herokuapp.com/"> Simple Blog Project &#129157;</a>
+            </p>
+            <p>Ruby on Rails</p>
+          </div>
+        </div>
+      </div>
+      <!-- PROJECT SLOT 2 -->
+      <div class="project-box proj p2">
+        <div class="slidein-details" onclick="slideOutTile(this, event);">
+          <div class="details-grid">
+            <div class="details-grid-element"></div>
+            <div class="details-grid-element" onclick="window.open('http://anonquotes.herokuapp.com/');">
+              Open Heroku App
+            </div>
+            <div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/rails/tree/master/Proto');">
+              Open Code Repository
+            </div>
+            <div class="details-grid-element">
+              <ul>
+                <li>____ AUG 2018 ____</li>
+                <li>My First Rails App</li>
+                <li>First Heroku Deploy</li>
+                <li>Learned the MVC</li>
+                <li>Pagination added</li>
+                <li>RWD [████████░░]</li>
+              </ul>
+              
+            </div>
+          </div>
+          
+        </div>
+        <div class="box-overlay" onclick="slideInTile(this, event);">
+          <div class="proj-descr">
+            <p>
+              <a href="http://anonquotes.herokuapp.com/"> Anonymous Quote Bin &#129157;</a>
+            </p>
+            <p>Ruby on Rails</p>
+          </div>
+        </div>
+        
+      </div>
+      
+      <!-- PROJECT SLOT 3 -->
+      <div class="project-box proj p3">
+        <div class="slidein-details" onclick="slideOutTile(this, event);">
+          <div class="details-grid anim-sequence">
+            <div class="details-grid-element"></div>
+            <div class="details-grid-element" onclick="window.open('http://socketpaint.herokuapp.com/')">Open Heroku App</div>
+            <div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/nodejs/tree/master/sockets')">Open Code Repository</div>
+            <div class="details-grid-element">
+              <ul>
+                <li>____ DEC 2018 ____</li>
+                <li>Node App</li>
+                <li>Using p5.js</li>
+                <li>WebSockets</li>
+                <li>Draw together</li>
+                <li>And chat :)</li>
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+        <!-- <div class="box-overlay darkened" onclick="slideInTile(this, event);"> -->
+          <div class="box-overlay darkened" onclick="slideInTile(this, event);">
+            <div class="proj-descr">
+              <p>
+                <a href="https://socketpaint.herokuapp.com/"> Paint & Chat Collab &#129157;</a>
+              </p>
+              <p>Node.js</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- PROJECT SLOT 4 -->
+        <div class="project-box proj p4">
+          <div class="slidein-details" onclick="slideOutTile(this, event);">
+            <div class="details-grid">
+              <div class="details-grid-element"></div>
+              <div class="details-grid-element" onclick="window.open('http://mdanlowski.github.io/shooter')">Go to the App</div>
+              <div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/mdanlowski.github.io/tree/master/shooter')">Show the Repo</div>
+              <div class="details-grid-element">
+                <ul>
+                  <li>____ MAY 2018 ____</li>
+                  <li>p5.js Canvas Game</li>
+                  <li>Designed in OOP</li>
+                  <li>Much fun doing vector_</li>
+                  <li>_math behind shooting</li>
+                  <li>Debug data eveywhere :D</li>
+                  <li>Work progress:</li>
+                  <li>[██░░░░░░░░]</li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+          <div class="box-overlay darkened" onclick="slideInTile(this, event);">
+            <div class="proj-descr">
+              <p>
+                <a href="shooter"> JS Shooter Prototype &#129157;</a>
+              </p>
+              <p>JavaScript (p5.js)</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- PROJECT SLOT 5 -->
+        <div class="project-box proj p5">
+          <div class="slidein-details" onclick="slideOutTile(this, event);">
+            <div class="details-grid">
+              <div class="details-grid-element"></div>
+              <div class="details-grid-element" onclick="window.open('http://mdanlowski.github.io/fcc-quote-machine')">Go to the App</div>
+              <div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/mdanlowski.github.io/tree/master/fcc-quote-machine')">Show the Repo</div>
+              <div class="details-grid-element">
+                <ul>
+                  <li>____ DEC 2017 ____</li>
+                  <li>Simple bootstrap page</li>
+                  <li>One of first projects</li>
+                  <li>Full Viewport Header</li>
+                  <li>Used Wikiquotes API_</li>
+                  <li>_to pull quotes</li>
+                  <li>Used Twitter API_</li>
+                  <li>_to publish a quote</li>
+                </ul>
+              </div>
+            </div>
+            
+          </div>
+          <div class="box-overlay darkened" onclick="slideInTile(this, event);">
+            <div class="proj-descr">
+              <p>
+                <a href="fcc-quote-machine"> Random Quote Machine &#129157;</a>
+              </p>
+              <p>WikiQuotes, Twitter APIs</p>
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <!-- PROJECT SLOT 6 - temporary for other projects -->
+        <div class="project-box proj p6">
+          <div class="slidein-details" onclick="slideOutTile(this, event);">
+            <div class="details-grid other-projects-tile">
+              <ul>
+                <li class="text-center"> ________ Other Projects ________ </li>
+                <!-- @TODO swap with API or Shooter or add another tile -->
+                <li>-> <a  href="http://url-shorty-md.herokuapp.com/">Rails URL Shorting App</a></li>
+                <li>-> <a  href="javascript:alert('comming soon!')">TODOExplorer - a Python code crawler</a></li>
+                <li>-> <a  href="javascript:alert('comming soon!')">Prettyfication - An Alert() Alternative</a></li>
+                <li>-> <a  href="fcc-tribute-page">My first Bootstrap page - Tribute</a></li>
+                <li>-> <a  href="fcc-portfolio">A /very/ old Bootstrap portfolio</a></li>
+                <!-- @TODO put all minor projects on codepen -->
+                <!-- <li>-> <a  href="javascript:alert('comming soon!')">Prettyfication - An Alert() Alternative</a></li> -->
+                <!-- <li></li> -->
+                <!-- <li> -->
+                  <!-- <img width="300px" src="assets/img/soon.png" class="img img-fluid rounded-circle"> -->
+                <!-- </li> -->
+              </ul>
+            </div>
+                              
+          </div>
+      <div class="box-overlay darkened" onclick="slideInTile(this, event);">
+        <div class="proj-descr">
+          <p>
+            <a href="#">  Other Projects  &#129157;</a>
+          </p>
+          <p><strong>Various Tech</strong></p>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
 
-				</div>
-				
-			</div>
-			
-		</div>
-		
-		
-		<div id="about-section">
-			
-			<div class="corner-nav cn3">
-					<!-- <a href="#@TODO-section">▼</a> -->
-					<a href="#cv-section">▲</a>
-			</div>
-			
-			<div id="canvas-holder"></div>
-			<div id="side-notes">
-				<h1>parampampam</h1>
-			</div>
-			
-		</div>
-		
-		
-	</body>
-	
-	<!-- <script src="assets/script.js"></script> -->
-	
-	</html>
+<div class="footer">
+  
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="cv-section">
+  
+<div class="corner-nav cn2">
+  <a href="#projects-section">▲</a>
+  <a href="#about-section">▼</a>
+</div>
+
+<div class="cv-subsection">
+  <h1>_about</h1>
+  <div class="cv-panel">
+    <!-- <div class="text-center">
+      <img id="my-photo" src="assets/img/mdski1.png">
+    </div>
+    
+    <p>
+      Bachelor of Engineering in Mechatronics; joined Accenture in Warsaw as my first professional position to take part in building and maintaining internet banking front-end (earlier core-banking). I'm a part of an international team in Agile environment. My focus in learning outside work are Ruby on Rails, Python and JavaScript (+ES6), I also have basic knowledge of C++ and Java. I enjoy building front-end very much, as it is quick to test and modify. Using Linux and Git every day. Aspiring for a full-stack.
+    </p> -->
+    
+  </div>
+</div>
+<div class="cv-subsection">
+  <h1>_education</h1>
+  
+  <div class="cv-panel">
+    <h1>Comming Soon</h1>
+    <!-- <div class="cv-list">
+      <ul>
+        <li>BACHELOR OF ENGINEERING | 02.2018 | MILITARY UNIVERISTY OF TECHNOLOGY IN WARSAW | MECHATRONICS | Specialization: Industrial Automation and Control Systems, Robotics (GPA 4.36)</li>
+        <li>Introduction to Python for Data Science [CERTIFICATE NO. #3,522,257] | AUGUST 2017 | EDX.ORG/DATACAMP.COM</li>
+        <li>FULL STACK WEB DEV CERTIFICATE | IN PROGRESS | FREECODECAMP.COM</li>
+        <li>RUBY ON RAILS DEVELOPER PATH | IN PROGRESS | LINKEDIN LEARNING / UDEMY</li>
+        <li>LINUX FUNDAMENTALS | IN PROGRESS | edX.org</li>
+        <li>ECDL V5.0 CERTIFICATE [LICENSE PL-6174832] | APRIL 2015 | ECDL FOUNDATION</li>
+        <li>ECCC CS M2 CERTIFICATE (Computer Graphics) [LICENSE EAB-0012-B-3380] | SEP. 2011 | ECCC FOUNDATION</li>
+      </ul>
+    </div> -->
+  </div>
+  
+</div>
+<div class="cv-subsection">
+  <h1>_experience</h1>
+  
+  <div class="cv-panel">
+    <!-- <div class="left-scroll">
+      <div class="cv-list">   
+        <ul>FRONT-END / UX DEVELOPER | ACCENTURE | WARSAW | SEPTEMBER 2018 – NOW
+          <li> Analysis of bugs and errors in the Banking Front-end</li>
+          <li> Implementing bugfixes and corrections in code: HTML (.NET Core), CSS/LESS stylesheets, JavaScript</li>
+          <li> Introducing minor fixes in graphics and design</li>
+          <li> Responsible for assessment and assurance of the website accessibility according to WCAG standards</li>
+          <li> Everyday use of Git and Bitbucket in code management</li>
+        </ul>
+        <ul>JUNIOR MAINFRAME PROGRAMMER | ACCENTURE | WARSAW | APRIL 2018 – AUGUST 2018
+          <li> Worked as a member of an active, multinational Agile team</li>
+          <li> Used COBOL and JCL to develop banking applications</li>
+          <li> Analyzed and modified existing solutions to accommodate trending needs</li>
+          <li> Took part in implementing mentioned systems in a newly forming banking instance</li>
+          <li> Performed code peer-reviews</li>
+          <li> Cooperated with testing team, took active part in Agile Demos and meetings with stakeholders and business partners</li>
+          <li> Took active part in knowledge sharing meetings and self-development guilds</li>
+        </ul>
+        <ul>PROGRAMMING INSTRUCTOR (WEEKENDS) | WOWSCHOOL | WARSAW | SEPTEMBER 2017 - NOW
+          <li> Teaching children and teenagers, introducing them to the programming world, increasing their interest and awareness of this field of education - the role helped me develop patience, public-speaking skills & dynamic approach to problems</li>
+          <li> Presenting web technologies to teenagers under 17: HTML5, CSS3 (+Bootstrap), JavaScript (+popular libraries), GitHub, WordPress</li>
+          <li> Teaching the basic principles of programming through fun & adventure – children under 13, using environments from MIT and Microsoft, as well as Python language</li>
+          <li> Building an unconventional and enthusiastic educational environment.</li>
+        </ul>
+        <ul>INSTRUCTOR’S ASSISTANT | WOWSCHOOL | WARSAW | MARCH 2017 – JUNE 2017
+          <li> Aiding in running classes and organizing events.</li>
+        </ul>
+        <ul>INTERN | Optoelectronics Institute | Military University of Technology
+          <li>Research and technical works</li>
+          <li>Examining properties of different electronic and optoelectronic components, emitters and sensors</li>
+          <li>Experience with optic fiber transmitters, spectroscopes, oscilloscopes, signal generators and other measuring equipment</li>
+          <li>Programming microcontroller-based applications with C/C++</li>
+        </ul>
+      </div> -->
+    </div>
+
+  </div>
+  
+</div>
+
+</div>
+
+
+<div id="about-section">
+  <h1>Comming Soon</h1>
+
+  <div class="corner-nav cn3">
+    <!-- <a href="#@TODO-section">▼</a> -->
+    <a href="#cv-section">▲</a>
+  </div>
+
+  <div id="canvas-holder"></div>
+  <div id="side-notes">
+  </div>
+  
+</div>
+
+</body>
+<!-- <script src="assets/script.js"></script> -->
+                    
+</html>

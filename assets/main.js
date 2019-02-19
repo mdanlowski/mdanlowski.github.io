@@ -69,7 +69,7 @@ document.addEventListener('keydown', function(e){
 	}
 	else if (e.code == 'ArrowDown') {
 		
-		if (window.location.href.endsWith('.io') || window.location.href.includes('#projects-section')) {
+		if (window.location.href.endsWith('.io') || window.location.href.endsWith('.html') || window.location.href.includes('#projects-section')) {
 			document.querySelector('a[href="#cv-section"]').click();
 		}//1 v
 		else if(window.location.href.includes('#cv-section')){
