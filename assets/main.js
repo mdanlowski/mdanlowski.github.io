@@ -55,25 +55,26 @@ document.addEventListener('keydown', function(e){
 	console.log(e.code);
 	if (e.code == 'Space') document.getElementById('TASC').click();
 	else if (e.code == 'ArrowUp'){
-		//if (window.location.href.includes('.io') || window.location.href.includes('.io') || window.location.href.includes('#projects-section')) {
+		var loc = window.location.href;
+		//if (loc.includes('.io') || loc.includes('.io') || loc.includes('#projects-section')) {
 			//pass
 		//}//1 ^
-		if(window.location.href.endsWith('#cv-section')){
+		if(loc.endsWith('#cv-section')){
 			document.querySelector('a[href="#projects-section"]').click();
 		}//2 ^
-		if (window.location.href.endsWith('#about-section')) {
+		if (loc.endsWith('#about-section')) {
 			document.querySelector('a[href="#cv-section"]').click();
 		}//3 ^
 		
 	}
 	else if (e.code == 'ArrowDown') {
-		if(window.location.href.endsWith('.io') || window.location.href.endsWith('.html') || window.location.href.endsWith('#projects-section')) {
+		if(loc.endsWith('.io') || loc.endsWith('.io/') || loc.endsWith('.html') || loc.endsWith('#projects-section')) {
 			document.querySelector('a[href="#cv-section"]').click();
 		}//1 v
-		else if(window.location.href.endsWith('#cv-section')){
+		else if(loc.endsWith('#cv-section')){
 			document.querySelector('a[href="#about-section"]').click();
 		}//2 v
-		//if (window.location.href.includes('#about-section')) {
+		//if (loc.includes('#about-section')) {
 			//document.querySelector('a[href="#@TODO-SECTION"]').click();
 		//}//3 v
 		
