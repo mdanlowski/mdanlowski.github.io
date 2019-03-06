@@ -93,7 +93,8 @@ body {
 }
 .corner-nav a {
 	/*background-color: darkred;*/
-	color: #7eacdc !important;
+	color: #17a2b8 !important;
+	/* color: #7eacdc !important; */
 	padding: 2px 5px;
 	/*margin-left: 1px;*/
 }
@@ -125,7 +126,7 @@ a {
 	/*position: fixed;
 	top: 5px;*/
 	padding-right: 10px;
-	color: #7eacdc !important;
+	/* color: #7eacdc !important; */
 }
 
 .contact i:hover {
@@ -141,7 +142,7 @@ a {
 	left: 5px;  */
 	/*font-size: 0.8em;*/
 	/*font-style: italic;*/
-	color: #7eacdc !important;
+	/* color: #7eacdc !important; */
 }
 
 .responsive-wrapper {
@@ -470,11 +471,11 @@ a {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	color: #17a2b8;
 }
 
 .reveal-all {
 	padding-left: 10px;
-	color: #7eacdc;
 }
 .reveal-all:hover {
 	cursor: pointer;
