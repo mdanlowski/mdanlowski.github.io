@@ -15,22 +15,58 @@ $bl: #7eacdc;
 }
 
 
-#cv-section {
+#tech-section {
 	/* background-color: #9E1030; */
-	background-color: #091534;
-	height: 100vh;
+	/* background-color: #091534; */
+  background-color: rgba(9,21,52,1);
+
+  height: 100vh;
 	width: 100%;
-	
-	padding: 30px;
-	
-	/*display: grid;*/
-	grid-template-columns: 25% 25% 45%;
-	grid-template-rows: 90%;
-	grid-gap: 10px;
-	
-	align-content: center;
-	justify-content: center;
+  
+	/*salign-content: center;
+	justify-content: center; */
 }
+
+#tech-section > .justifier {
+  margin: auto;
+  width: 80%;
+}
+
+.justifier > .justifier-grid {
+  display: grid;
+  grid-template-columns: 71% 29%;
+  grid-template-rows: 100%;
+  grid-gap: 30px;
+  
+}
+
+.emphasis-selectors {
+  max-height: 30%;
+  margin-top: calc(100% / 3);
+  /* text-decoration: underline; */
+}
+
+.emselector {
+  color: #17a2b8;
+  font-size: 50pt;
+  text-align: center;
+  border-bottom: 4px solid darkred;
+
+  transition: background-color 500ms;
+}
+
+.emselector:hover {
+  background: darkred;
+  cursor: crosshair;
+}
+
+.gh {
+  background-color: #7eacdc;
+  background-blend-mode: overlay;
+  border-radius: 50%;
+}
+
+
 
 #about-section {
 	background-color: #091534;
@@ -57,47 +93,16 @@ $bl: #7eacdc;
 	bottom: calc(-200vh + 5px) !important;
 }
 
-.cv-subsection {
-	border: 2px solid #17a2b8;
-	color: #17a2b8;
-}
-.cv-subsection h1 {
-	font-family: 'tabsFont';
-	/*text-transform: uppercase;*/
-}
-
-
-.cv-panel {
-	height: 100%;
-	color: white;
-	padding: 30px;
-	
-}
-.left-scroll {
-	height: 90%;
-	direction: rtl;
-	overflow-y: hidden;
-	padding-left: 8px !important;
-}
-.left-scroll:hover {
-	overflow-y: scroll;
-	padding-left: 0px !important;
-}
-.cv-list {
-	direction: ltr;
-	height: 90%;
+.tech-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(5, minmax(100px, 205px));
+  grid-template-rows: repeat(3, 200px);
+  /* grid-template-rows: 50%; */
 }
 
-.cv-panel p {
-	padding-top: 30px;
-	text-align: center;	
-}
-
-.cv-panel ul {
-	margin-left: 0;
-}
-
-#my-photo {
-	max-width: 300px;
-	/*border-radius: 50%;*/
+.tech-grid > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }

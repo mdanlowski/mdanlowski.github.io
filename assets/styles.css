@@ -19,7 +19,7 @@ html {
 	.responsive-wrapper {
 		padding: 10% 12% 10% 12% !important;
 	}
-	#cv-section, #about-section {
+	#tech-section, #about-section {
 		display: grid !important;
 	}
 	.corner-nav {
@@ -42,7 +42,7 @@ html {
 
 		/*opacity: 0.2;*/
 	}
-	#cv-section, #about-section, .corner-nav {
+	#tech-section, #about-section, .corner-nav {
 		display: none;
 	}
 }
@@ -65,7 +65,7 @@ html {
 	#projects-section {
 		background: unset !important;
 	}
-	#cv-section, #about-section, .corner-nav {
+	#tech-section, #about-section, .corner-nav {
 		display: none;
 	}
 	body {
