@@ -87,21 +87,22 @@ body {
 }
 
 .corner-nav {
-	position: absolute;
-	bottom: 5px;
-	right: 5px;
+  position: absolute;
+  width: 100vw;
+	bottom: 0px;
+  font-size: 40pt;
+  text-align: center;
 }
 .corner-nav a {
-	/*background-color: darkred;*/
-	color: #17a2b8 !important;
-	/* color: #7eacdc !important; */
-	padding: 2px 5px;
-	/*margin-left: 1px;*/
+	color: darkred !important;
+	/* color: #17a2b8 !important; */
+  padding: 2px 5px;
+  
+  transition: color 500ms;
 }
 .corner-nav a:hover {
 	text-decoration: none;
-	/*background-color: crimson;*/
-	color: crimson !important;	
+	color: red !important;	
 }
 
 
@@ -136,22 +137,15 @@ a {
 
 .toggleasc {
 	padding-left: 10px;
-	cursor: pointer;
-	/* position: fixed;
-	top: 5px;
-	left: 5px;  */
-	/*font-size: 0.8em;*/
-	/*font-style: italic;*/
-	/* color: #7eacdc !important; */
+  cursor: pointer;
+}
+.toggleasc:hover {
+  color: crimson;
 }
 
 .responsive-wrapper {
 	height: 100vh;
 	width: 100%;
-/*	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;*/
 }
 
 .grid-wrapper {
@@ -471,14 +465,17 @@ a {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	color: #17a2b8;
+	color: darkred;
 }
-
+.contact > a:hover {
+  color: crimson !important;
+}
 .reveal-all {
 	padding-left: 10px;
 }
 .reveal-all:hover {
-	cursor: pointer;
+  cursor: pointer;
+  color: crimson;
 }
 
 
