@@ -59,20 +59,20 @@ document.addEventListener('keydown', function(e){
 		//if (loc.includes('.io') || loc.includes('.io') || loc.includes('#projects-section')) {
 			//pass
 		//}//1 ^
-		if(loc.endsWith('#cv-section')){
+		if(loc.endsWith('#tech-section')){
 			document.querySelector('a[href="#projects-section"]').click();
 		}//2 ^
 		if (loc.endsWith('#about-section')) {
-			document.querySelector('a[href="#cv-section"]').click();
+			document.querySelector('a[href="#tech-section"]').click();
 		}//3 ^
 		
 	}
 	else if (e.code == 'ArrowDown') {
 		var loc = window.location.href;
 		if(loc.endsWith('.io') || loc.endsWith('.io/') || loc.endsWith('.html') || loc.endsWith('#projects-section')) {
-			document.querySelector('a[href="#cv-section"]').click();
+			document.querySelector('a[href="#tech-section"]').click();
 		}//1 v
-		else if(loc.endsWith('#cv-section')){
+		else if(loc.endsWith('#tech-section')){
 			document.querySelector('a[href="#about-section"]').click();
 		}//2 v
 		//if (loc.includes('#about-section')) {
