@@ -15,6 +15,10 @@ function handleMouse(e) {
 
 // slide-in tiles
 function slideInTile(obj, event) {
+  if(arguments[2]){
+      document.getElementById("new-features-badge").style.display = "none";
+  }
+
 	var style_ = obj.parentNode.querySelector('.slidein-details').style;
 	style_.height = '100%';
 	style_.fontSize = '11pt';
@@ -32,7 +36,13 @@ function slideInTile(obj, event) {
 }
 
 function slideOutTile(obj, event) {
-	obj.style.height = '0%';
+  if(arguments[2]){
+    setTimeout(function(){
+      document.getElementById("new-features-badge").style.display = "block";
+    }, 550);
+  }
+
+  obj.style.height = '0%';
 	obj.style.fontSize = '0';
 	obj.parentNode.querySelector('.box-overlay').style.display = 'flex';
 
