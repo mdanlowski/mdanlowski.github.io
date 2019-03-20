@@ -16,7 +16,13 @@ function handleMouse(e) {
 // slide-in tiles
 function slideInTile(obj, event) {
   if(arguments[2]){
-      document.getElementById("new-features-badge").style.display = "none";
+    var containedBy = "." + event.target.parentElement.classList[2];
+    console.log("in",event);
+    console.log("in",event.target);
+    console.log("in",event.target.parentElement);
+    console.log("in",containedBy);
+    
+    // document.querySelector(containedBy + " .new-features-badge").style.display = "none";
   }
 
 	var style_ = obj.parentNode.querySelector('.slidein-details').style;
@@ -38,7 +44,13 @@ function slideInTile(obj, event) {
 function slideOutTile(obj, event) {
   if(arguments[2]){
     setTimeout(function(){
-      document.getElementById("new-features-badge").style.display = "block";
+      var containedBy_out = "." + event.target.parentElement.classList[2];
+      console.log("out",event);
+      console.log("out",event.target);
+      console.log("out",event.target.parentElement);
+      console.log("out",containedBy_out);
+      
+      // document.querySelector(containedBy_out + " .new-features-badge").style.display = "block";
     }, 550);
   }
 

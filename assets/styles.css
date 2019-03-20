@@ -35,7 +35,7 @@ html {
 		/*when more projects:*/
 		/*grid-template-columns: repeat(3, 400px);
 		grid-template-rows: 400px 400px;*/
-		grid-template-columns: repeat(6, 400px);
+		grid-template-columns: repeat(7, 400px);
 		grid-template-rows: 400px;
 		overflow-x: hidden;
 		overflow-y: hidden;
@@ -169,12 +169,17 @@ a {
 
 }
 
-#new-features-badge {
+.new-features-badge {
   width: 100px;
   height: 100px;
   background: url('img/news.png');
   position: relative;
   z-index: 10000;
+  /* margin-top: -100px; */
+  /* padding-bottom: 200px; */
+}
+.tile-with-news-badge {
+  margin-top: -100px;
 }
 
 .proj {
@@ -206,6 +211,10 @@ a {
 
 .p1 {
 	background: url('img/rails_1_blog.png');
+}
+
+.p15 {
+	background: url('img/rails_2_rss.png');
 }
 
 
@@ -307,7 +316,7 @@ a {
 }
 
 /*-111111111111111111111111111111111111111111111111-*/
-.p1 .details-grid-element:first-child, .p2 .details-grid-element:first-child {
+.p1 .details-grid-element:first-child, .p15 .details-grid-element:first-child, .p2 .details-grid-element:first-child {
 	background: url('img/rubyonrails.png');
 	background-color: #000000cd; 
 	/*background-color: #000000;*/
@@ -316,13 +325,13 @@ a {
 	background-position: center;
 	
 }
-.p1 .details-grid-element:nth-child(3), .p1 .details-grid-element:nth-child(2) {
+.p1 .details-grid-element:nth-child(3), .p15 .details-grid-element:nth-child(3), .p1 .details-grid-element:nth-child(2), .p15 .details-grid-element:nth-child(2) {
 	/*pick me up!*/
 	text-align: center;
 	line-height: 200px;
 	font-weight: bold;
 }
-.p1 .details-grid-element:nth-child(3):hover, .p1 .details-grid-element:nth-child(2):hover {
+.p1 .details-grid-element:nth-child(3):hover, .p1 .details-grid-element:nth-child(2):hover, .p15 .details-grid-element:nth-child(3):hover, .p15 .details-grid-element:nth-child(2):hover {
 	color: black;
 	background-color: darkred;
 }

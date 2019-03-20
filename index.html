@@ -89,6 +89,48 @@
           </div>
         </div>
       </div>
+
+
+      <!-- PROJECT SLOT 1.5 -->
+      <div class="project-box proj p15">
+        <div class="slidein-details" onclick="slideOutTile(this, event, badge=true);">
+          <div class="new-features-badge"><!-- <img src="./assets/img/news.png"/> --></div>
+          <div class="details-grid tile-with-news-badge">
+            <div class="details-grid-element"></div>
+            <div class="details-grid-element" onclick="alert('The app is not deployed yet. Warm encouragement to run locally.');">
+              Open App
+            </div>
+            <div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/rails/tree/master/rss_feed_aggr');">
+              Open Code Repository
+            </div>
+            <div class="details-grid-element">
+              <ul>
+                <li>____ MAR 2019 ____</li>
+                <li>Services</li>
+                <li>Jobs</li>
+                <li>Add RSS channels</li>
+                <li>Set update times</li>
+                <li>Set max post fetch</li>
+                <li>Browse posts from_</li>
+                <li>_your channels</li>
+              </ul>
+              
+            </div>
+          </div>
+          
+        </div>
+        <div class="box-overlay darkened" onclick="slideInTile(this, event, badge=true);">
+          <div class="proj-descr">
+            <p>
+              <a href="https://github.com/mdanlowski/rails/tree/master/rss_feed_aggr"> RSS Feed Browser &#129157;</a>
+            </p>
+            <p>Ruby on Rails</p>
+          </div>
+        </div>
+        
+      </div>
+
+
       <!-- PROJECT SLOT 2 -->
       <div class="project-box proj p2">
         <div class="slidein-details" onclick="slideOutTile(this, event);">
@@ -127,8 +169,8 @@
       <!-- PROJECT SLOT 3 -->
       <div class="project-box proj p3">
           <div class="slidein-details" onclick="slideOutTile(this, event, badge=true);">
-          <div id="new-features-badge"><!-- <img src="./assets/img/news.png"/> --></div>
-          <div class="details-grid anim-sequence">
+          <div class="new-features-badge"><!-- <img src="./assets/img/news.png"/> --></div>
+          <div class="details-grid tile-with-news-badge anim-sequence">
             <div class="details-grid-element"></div>
             <div class="details-grid-element" onclick="window.open('http://socketpaint.herokuapp.com/')">Open Heroku App</div>
             <div class="details-grid-element" onclick="window.open('https://github.com/mdanlowski/nodejs/tree/master/sockets')">Open Code Repository</div>
