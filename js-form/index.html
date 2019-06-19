@@ -7,15 +7,16 @@
 			var target = document.getElementById('form-effect');
 			// console.log(form);
 			console.log("RAW FORM DATA");
-			console.log(form.name.value);
+			console.log(form);
 			console.log(form.age.value);
 			console.log(form.sex.value);
 			console.log(form.cool.value);
 
+
 			target.innerHTML = "<h1>YOUR CHARACTER:"
 								+ "<br>Name: " 		+ form.name.value
 								+ "<br>Age: " 		+ form.age.value
-								+ "<br>Sex: " 		+ form.sex.value
+								+ "<br>Gender: " 		+ form.sex.value
 								+ "<br>Coolness: "	+ form.cool.value;
 								+ "</h1>";
 		}
@@ -26,7 +27,7 @@
 	<h1>ayy lmao</h1>
 
 	<main>
-		<form action="javascript:processForm(document.querySelector('form'));">
+		<form action="javascript:processForm(this);">
 
 			<hr>
 			<p>NAME:<input type="text" name="name" value="Marco"></p>

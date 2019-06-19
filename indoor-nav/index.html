@@ -1,0 +1,72 @@
+<html>
+<head>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.0.0/fabric.min.js"></script> -->
+  <script src="./fabric.js"></script>
+  <script src="./test.js"></script>
+  <link rel="stylesheet" href="./main.css" /></head>
+<body>
+  <div class="container">
+    <canvas id="canv"></canvas>
+    <fiv id="toolbox">
+      SELECTION:
+      <div>
+        <button>Duplicate</button>
+        <button>Deselect</button>
+        <button>Delete</button>
+      </div>
+      <div>
+        <button>Move to Foreground</button>
+        <button>Move to Background</button>
+        
+      </div>
+      <hr />
+
+      PRIMITIVES:
+      <form action="javascript:insertShape();">
+        <div>
+          <input type="radio" value="square" name="primitive" id="create-primitive-square"> Square
+          <input type="radio" value="triangle" name="primitive" id="create-primitive-triangle"> Triangle
+          <input type="radio" value="circle" name="primitive" id="create-primitive-circle"> Circle
+          <input type="submit" name="" value="Create">      
+        </div>
+      </form>
+      <hr />
+      PICTOGRAMS: 
+      <form action="javascript:insertPictogram();">      
+        <div>
+          <input disabled type="radio" value="desk" name="pictogram" id="create-pictogram-desk"> Desk
+          <input type="radio" value="chair" name="pictogram" id="create-pictogram-chair"> Chair
+          <input disabled type="radio" value="car" name="pictogram" id="create-pictogram-car"> Car
+          <input disabled type="radio" value="door" name="pictogram" id="create-pictogram-door"> Door
+          <input type="submit" name="" value="Create">
+        </div>
+      </form>
+      
+      <hr />
+      
+      TEXT:
+      <div>
+        <input id="create-text" type="text" />
+        <input type="color" value="#FFFFFF" id="create-text-color" />
+        <input type="range" value=30 min=6 max=100 id="create-text-size" onchange="document.querySelector('#text-size-label').innerHTML = this.value;" />
+        <span id="text-size-label">0</span>
+      </div>
+      <button onclick="insertText()">Create</button>
+      
+      <hr />
+
+      Settings:
+      <div>
+        Background brightness:
+        <input id="settings-backround" type="range" value=0 min=0 max=255 onchange="setBackgroundBrightness(this)"/>
+
+      </div>
+
+
+  </div>
+  </div>
+
+  <script src="./main.js"></script>
+  <script src="./actions.js"></script>
+</body>
+</html>
