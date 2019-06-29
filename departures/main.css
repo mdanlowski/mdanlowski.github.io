@@ -1,0 +1,34 @@
+* {
+  font-family: sans-serif;
+}
+
+.date-header {
+  text-align: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 48% 48%;
+  grid-template-rows: 90%;
+  column-gap: 4%;
+}
+.results {
+  padding: 10px;
+}
+.results:nth-child(1){
+  background-color: azure;
+}
+.results:nth-child(2){
+  background-color: whitesmoke;
+}
+
+table {
+  width: 100%;
+}
+
+.line-number-cell, .departs-soon {
+  color: crimson;
+}
+
+.to-work {
+  color: limegreen !important;
+}
