@@ -66,6 +66,29 @@
   </div>
   </div>
 
+  <div class="dim-overlay"></div>
+  <div class="reservation-modal">
+    <div class="reservation-form">
+      <h1>New Reservation</h1>
+      <hr>
+      <h2 id="resource-name"></h2>
+      <div class="form-header">
+        
+      </div>
+      <div class="form-content">
+        <label for="reservation_purpose">Reservation Purpose</label>
+        <input type="text" name="reservation[purpose]" id="reservation_purpose">
+      </div>
+      
+      <div class="form-footer">
+        <div class="footer-buttons">
+          <button onclick="toggleModal('.reservation-modal', false)">Create</button>
+          <button onclick="toggleModal('.reservation-modal', false)">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="./main.js"></script>
   <script src="./actions.js"></script>
 </body>

@@ -52,3 +52,19 @@ function setBackgroundBrightness(slider){
     canvas.set('backgroundColor', `rgb(${slider.value}, ${slider.value}, ${slider.value})`);
     canvas.renderAll();
 }
+
+function toggleModal(modalSelector, onOffBoolean){
+    // console.log(event);
+    
+    let dim = document.querySelector('.dim-overlay');
+    dim.style.display = onOffBoolean ? 'block' : 'none';
+
+    let modal = document.querySelector(modalSelector);
+    modal.style.display = onOffBoolean ? 'block' : 'none';
+
+}
+
+function onModalOpen(modalSelector, data){
+    modal = document.querySelector(modalSelector);
+    modal.querySelector('#resource-name').innerText = data[0].toUpperCase() + data.substr(1);
+}

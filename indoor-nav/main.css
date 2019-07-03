@@ -1,24 +1,69 @@
 body {
-    background-color: black;
-    
+  background-color: black;
+  font-family: monospace;
 }
 
 .container {
-    display: flex;
+  display: flex;
 }
 
 #canv {
-    width: 800px;
-    height: 600px;
-    border: 1px solid gray;
+  width: 1280px;
+  height: 758px;
+  border: 1px solid gray;
 }
 
 #toolbox {
-    background-color: #a6a6a6;
-    margin-left: 10px;
-    padding: 5px;
-    min-width: 400px;
-    height: 600px;
-    border: 1px solid gray;
-    overflow-y: scroll;
+  background-color: #a6a6a6;
+  margin-left: 10px;
+  padding: 5px;
+  min-width: 400px;
+  height: 600px;
+  border: 1px solid gray;
+  overflow-y: scroll;
+}
+
+.dim-overlay {
+  z-index: 9998;
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.reservation-modal {
+  z-index: 9999;
+  display: none;
+  background-color: whitesmoke;
+  position: fixed;
+  left: 40%;
+  top: 20%;
+  height: 60%;
+  width: 20%;
+}
+
+.reservation-form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+}
+.reservation-form h1, h2 {
+  text-align: center;
+  margin-top: -20px;
+}
+
+.form-footer {
+  height: 50px;
+  text-align: right;
+  border-bottom: 4px solid crimson;
+  width: 100%;
+  margin-left: -20px;
+  padding-right: 40px;
+}
+.footer-buttons {
+  padding-top: 14px;
 }
