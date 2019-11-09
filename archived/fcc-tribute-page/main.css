@@ -1,0 +1,17 @@
+body {
+  margin-top: 50px;
+  background-color: honeydew;
+}
+h1, h2 {
+  font-family: Georgia, serif;
+}
+#mainBox {
+  border-radius: 20px;
+  background-color: lightblue;
+}
+#elon {
+  margin: 25px;
+}
+.mainContent {
+  margin: 45px;
+}

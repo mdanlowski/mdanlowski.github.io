@@ -1,5 +1,0 @@
-[
-  { "id": 1, "name": "Castelgandolfo", "photoUrl": "https://dogecoin.com/imgs/doge.png", "capacity": 4, "floor": "0B", "color": "#42F514", "amenities": ["TV", "Projector", "Flipchart"] },
-  { "id": 2, "name": "Andrzej", "photoUrl": "http://belgradearthotel.com/wp-content/uploads/2017/04/andreaI2.jpg", "capacity": 12, "floor": "0B", "color": "#00FF90", "amenities": ["TV", "Flipchart", "Interactive Board"] },
-  { "id": 3, "name": "Pierre", "photoUrl": "https://www.oyorooms.com/blog/wp-content/uploads/2018/03/fe-32.jpg", "capacity": 1, "floor": "2", "color": "#F14102", "amenities": ["Precision Scale", "Lab Furnace"] }
-]
