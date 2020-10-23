@@ -7,7 +7,11 @@
     <script src="./js/main.js"></script>
     <link rel="stylesheet" href="./css/main.css"/>
     <link rel="stylesheet" href="./fonts/bettercomicsansalternates.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;800&amp;display=swap&amp;family=Montserrat:wght@700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;800&amp;display=swap&amp;family=Montserrat:wght@700&amp;display=swap" rel="stylesheet"/>
+    <script>
+      var linkEbook = "https://www.osmpower.pl/kompetencje-jutra-bartosz-sobotka";
+      var linkPaper = "https://osmpower.salescrm.pl/ebook-kompetencje-jutra";
+    </script>
   </head>
   <body>
     <div class="menu">
@@ -40,10 +44,10 @@
             <h1 class="h-yellow">Kompetencje<br/>Jutra</h1><img class="book-icon" src="./img/ikona-ksiazka.png" alt="Książka - ikona symboliczna"/>
           </div>
           <div class="header-bottom">
-            <div class="subtitle-text">czyli czego rzeczywistość<br/>będzie wymagać<br/>od naszych dzieci</div>
+            <div class="subtitle-text">czyli czego rzeczywistość<br/>będzie wymagała<br/>od naszych dzieci</div>
             <div class="buy-buttons">
-              <button class="kj-button btn-yellow">Kup Książkę</button>
-              <button class="kj-button btn-yellow">Kup E-book</button>
+              <button class="kj-button btn-yellow" onclick="window.open(linkPaper)">Kup Książkę</button>
+              <button class="kj-button btn-yellow" onclick="window.open(linkEbook)">Kup E-book</button>
             </div>
           </div>
         </header>
@@ -57,21 +61,34 @@
           </div>
         </div>
         <div class="dual-column" id="cytaty-1">
-          <div class="quote quotes-around">...napisać, że dążenie człowieka do pojęcia przyszłości jest siłą napędową wszechświata, to jakby nic nie pisać. Ale to dążenie, nawet próbowanie po omacku, ma jedną niepodważalną zaletę – pozwala nam lepiej poznać siebie już dzisiaj. Stajemy się odkrywcami nie świata, a samych siebie. Każdy z nas może być swoim osobistym Krzysztofem Kolumbem czy Neilem Armstrongiem…</div>
-          <div class="quote quotes-around">...dlaczego tematyka przyszłości jest tak interesująca? Niewiadoma od zawsze frapowała człowieka. Ludzka wyobraźnia pozwala pojąć zjawiska, które jeszcze się nie wydarzyły. Dzięki niej tworzymy niemal realne modele przyszłej rzeczywistości. Ale scenariuszy jest nieskończenie wiele. A my chcemy wiedzieć dokładnie, jak będzie jutro, pojutrze, za rok...</div>
+          <div class="quote quotes-around">
+            ...napisać, że dążenie człowieka do pojęcia przyszłości jest siłą napędową wszechświata, to jakby nic nie pisać. 
+            Ale to dążenie, nawet próbowanie po omacku, ma jedną niepodważalną zaletę – pozwala nam lepiej poznać siebie już dzisiaj. 
+            Stajemy się odkrywcami nie świata, a&nbsp;samych siebie. Każdy z&nbsp;nas może być swoim osobistym Krzysztofem Kolumbem czy Neilem Armstrongiem…
+          </div>
+          <div class="quote quotes-around">
+            ...dlaczego tematyka przyszłości jest tak interesująca? Niewiadoma od zawsze frapowała człowieka. 
+            Ludzka wyobraźnia pozwala pojąć zjawiska, które jeszcze się nie wydarzyły. Dzięki niej tworzymy niemal realne modele przyszłej rzeczywistości. 
+            Ale scenariuszy jest nieskończenie wiele. A&nbsp;my chcemy wiedzieć dokładnie, jak będzie jutro, pojutrze, za rok...
+          </div>
         </div>
         <div id="kompetencje">
           <div class="transition-to-white">
             <div id="kompetencje-img"><img src="./img/kompetencje.png"/></div>
           </div>
           <div class="buy-buttons contained-for-screen-center">
-            <button class="kj-button btn-yellow">Kup Książkę</button>
-            <button class="kj-button btn-yellow">Kup E-book</button>
+            <button class="kj-button btn-yellow" onclick="window.open(linkPaper)">Kup Książkę</button>
+            <button class="kj-button btn-yellow" onclick="window.open(linkPaper)">Kup E-book</button>
           </div>
           <div class="dual-column" id="cytaty-2">
-            <div class="quote"><span class="h-blue">...do czego służą kompetencje?</span><br/>Do rozwiązywania problemów, które każdego dnia napotykamy na swojej drodze – zarównow życiu osobistym, jak i zawodowym. A kompetencje przyszłości to takie, które umożliwią nam rozwiązywanie przyszłych problemów...</div>
+            <div class="quote"><span class="h-blue">...do czego służą kompetencje?</span><br/>Do rozwiązywania problemów, które każdego dnia napotykamy na swojej drodze – zarównow życiu osobistym, jak i&nbsp;zawodowym. 
+              A&nbsp;kompetencje przyszłości to takie, które umożliwią nam rozwiązywanie przyszłych problemów...
+            </div>
             <section class="cogs mobile"></section>
-            <div class="quote">...raz nabyte kompetencje nie wystarczają na całe życie. Nie ma kompetencji nieużytecznych, a wszystkie są ze sobą powiązane, wzajemnie na siebie oddziałują i podlegają ciągłej ewolucji...</div>
+            <div class="quote">
+              ...raz nabyte kompetencje nie wystarczają na całe życie. Nie ma kompetencji nieużytecznych, 
+              a&nbsp;wszystkie są ze sobą powiązane, wzajemnie na siebie oddziałują i&nbsp;podlegają ciągłej ewolucji...
+            </div>
           </div>
         </div>
       </section>
@@ -84,10 +101,10 @@
         </div>
         <div class="author-about">
           <div class="about-infobox">
-            <p class="info-text"><span class="h-yellow h-bold">BARTOSZ SOBOTKA</span><br/><br/>przede wszystkim rodzic.<br/>Doktor nauk ekonomicznych (SGH), absolwent stosunków międzynarodowych na Uniwersytecie Warszawskim oraz prawa na UMCS. Dyrektor ds. Rozwoju w Syntea SA, zajmuje się integracją rynku pracy z sektorem edukacji w Polsce i krajach CEE. Animator Sektorowej Rady ds. Kompetencji - Nowoczesne Usługi Biznesowe. Konsultant projektów dla sektora IT i edukacji w kontekście wdrażania idei smart city, budowy Społeczeństwa 4.0 oraz dostosowania oferty kształcenia uczelni do potrzeb rynku pracy, przede wszystkim dla sektora usług dla biznesu <em>(Business Service Sector).</em></p>
+            <p class="info-text"><span class="h-yellow h-bold">BARTOSZ SOBOTKA</span><br/><br/>przede wszystkim rodzic.<br/><span class="bold">Doktor nauk ekonomicznych (SGH), </span>absolwent stosunków międzynarodowych na Uniwersytecie Warszawskim oraz prawa na UMCS. Dyrektor <span class="bold">ds. Rozwoju w&nbsp;Syntea&nbsp;SA, </span>zajmuje się integracją rynku pracy z&nbsp;sektorem edukacji w&nbsp;Polsce i&nbsp;krajach CEE. <span class="bold">Animator Sektorowej Rady ds. Kompetencji - Nowoczesne Usługi Biznesowe. </span>Konsultant projektów dla sektora IT i&nbsp;edukacji w&nbsp;kontekście wdrażania idei <span class="bold"><em>smart city, </em></span>budowy Społeczeństwa 4.0 oraz dostosowania oferty kształcenia uczelni do potrzeb rynku pracy, przede wszystkim dla sektora usług dla biznesu <span class="bold"><em>(Business Service Sector).</em></span></p>
           </div>
           <div class="about-infobox">
-            <p class="info-text">Zaczynał pracę zawodową w Ministerstwie Spraw Zagranicznych, gdzie zajmował się pomocą rozwojową. W latach 2008-2011 pracował w Urzędzie Miasta Lublin pełniąc funkcję Kierownika Biura Obsługi Inwestorów oraz Pełnomocnika Prezydenta ds. Podstrefy Lublin, aktywnie uczestnicząc w tworzeniu oferty inwestycyjnej m.in. pod kątem dostosowywania kompetencji sektora edukacji do potrzeb lokalnego rynku pracy. Autor i współautor kilkudziesięciu publikacji (w tym pięciu książek) z dziedziny pomocy rozwojowej i jej efektywności, rozwoju lokalnego oraz zarządzania edukacją.</p>
+            <p class="info-text">Zaczynał pracę zawodową w&nbsp;<span class="bold">Ministerstwie Spraw Zagranicznych, </span>gdzie zajmował się pomocą rozwojową. W&nbsp;latach 2008-2011 pracował w&nbsp;Urzędzie Miasta Lublin pełniąc funkcję <span class="bold">Kierownika Biura Obsługi Inwestorów </span>oraz <span class="bold">Pełnomocnika Prezydenta ds. Podstrefy Lublin, </span>aktywnie uczestnicząc w&nbsp;tworzeniu oferty inwestycyjnej m.in. pod kątem dostosowywania kompetencji sektora edukacji do potrzeb lokalnego rynku pracy. <span class="bold">Autor i&nbsp;współautor </span>kilkudziesięciu publikacji (w&nbsp;tym pięciu książek) z&nbsp;<span class="bold">dziedziny pomocy rozwojowej i&nbsp;jej efektywności, </span>rozwoju lokalnego oraz <span class="bold">zarządzania edukacją</span>.</p>
           </div>
         </div>
       </section>
@@ -99,14 +116,14 @@
             </div>
           </div>
           <div class="opinion-opinionator-block">
-            <div class="what-says quotes-around">Ta książka – tak naprawdę – nie daje prostych i oczywistych odpowiedzi. Pokaże Wam świat z wielu perspektyw i każe zastanowić się nad tym, jak bardzo zgadzacie się z wizją wyzwań, przed którymi stoi współczesne młode pokolenie. Czytając będziecie się zastanawiać, czy właśnie tak będzie wyglądała nasza przyszłość i niezbędne kompetencje. Możecie się z tą wizją nie zgadzać, ale nie zaprzeczycie, że dysponując opisanymi kompetencjami przyszłości poradzicie sobie w czasach rewolucji 4.0. I każdej kolejnej też.</div>
+            <div class="what-says quotes-around">Ta książka – tak naprawdę – nie daje prostych i&nbsp;oczywistych odpowiedzi. Pokaże Wam świat z&nbsp;wielu perspektyw i&nbsp;każe zastanowić się nad tym, jak bardzo zgadzacie się z&nbsp;wizją wyzwań, przed którymi stoi współczesne młode pokolenie. Czytając będziecie się zastanawiać, czy właśnie tak będzie wyglądała nasza przyszłość i&nbsp;niezbędne kompetencje. Możecie się z&nbsp;tą wizją nie zgadzać, ale nie zaprzeczycie, że dysponując opisanymi kompetencjami przyszłości poradzicie sobie w&nbsp;czasach rewolucji 4.0. I&nbsp;każdej kolejnej też.</div>
             <div class="who-says">
               <h2 class="h-blue">dr hab. Mariusz Kicia,</h2>
               <h2 class="h-blue">Wydział Ekonomiczny UMCS</h2>
             </div>
           </div>
           <div class="opinion-opinionator-block opinion-inverse">
-            <div class="what-says quotes-around">Dobra książka to taka, która pobudza do myślenia o ważnych sprawach, poszerza horyzonty i pozwala naszym myślom wzbić się wyżej. Każdego dnia tysiące innowatorów na uniwersytetach, w małych startupach i wielkich korporacjach pracuje nad innowacjami, które zmieniają nasz świat. Niektóre być może wywrócą go do góry nogami. Próba zrozumienia tych zmian, ich wpływu na świat otaczający mnie i moich najbliższych oraz przygotowania się na nie jest ważna. Trzymacie w ręku dobrą książkę. Książkę, która może Wam w tym pomóc.</div>
+            <div class="what-says quotes-around">Dobra książka to taka, która pobudza do myślenia o ważnych sprawach, poszerza horyzonty i&nbsp;pozwala naszym myślom wzbić się wyżej. Każdego dnia tysiące innowatorów na uniwersytetach, w&nbsp;małych startupach i&nbsp;wielkich korporacjach pracuje nad innowacjami, które zmieniają nasz świat. Niektóre być może wywrócą go do góry nogami. Próba zrozumienia tych zmian, ich wpływu na świat otaczający mnie i&nbsp;moich najbliższych oraz przygotowania się na nie jest ważna. Trzymacie w&nbsp;ręku dobrą książkę. Książkę, która może Wam w&nbsp;tym pomóc.</div>
             <div class="who-says">
               <h2 class="h-blue">Robert Ługowski,</h2>
               <h2 class="h-blue">Partner Zarządzający,</h2>
@@ -114,7 +131,7 @@
             </div>
           </div>
           <div class="opinion-opinionator-block">
-            <div class="what-says quotes-around">Teraz, jak nigdy wcześniej, zagadnienia związane z kompetencjami stają się kluczowe. Kluczowe jest nawet nie tyle to, jakie kompetencje powinno się mieć, ale raczej jak je zdobywać. Zrozumienie sposobów zdobywania i selekcji informacji oraz wiedzy, a także niezwykła sztuka oduczania się starych nawyków – jako kompetencje są uniwersalne i „adekwatne" w dzisiejszym i przyszłym świecie. W tej książce znajdą Państwo wiele przemyśleń na ten temat. To bardzo istotne kwestie dla liderów organizacji oraz firm, ale i dla rodziców oraz, miejmy nadzieję, również niektórych nastolatków. Warto znać zasady gry, zanim się wejdzie na boisko dorosłego życia. Autor stara się je w tej książce opisać i przybliżyć. Z dobrym skutkiem!</div>
+            <div class="what-says quotes-around">Teraz, jak nigdy wcześniej, zagadnienia związane z&nbsp;kompetencjami stają się kluczowe. Kluczowe jest nawet nie tyle to, jakie kompetencje powinno się mieć, ale raczej jak je zdobywać. Zrozumienie sposobów zdobywania i&nbsp;selekcji informacji oraz wiedzy, a&nbsp;także niezwykła sztuka oduczania się starych nawyków – jako kompetencje są uniwersalne i&nbsp;„adekwatne" w&nbsp;dzisiejszym i&nbsp;przyszłym świecie. w&nbsp;tej książce znajdą Państwo wiele przemyśleń na ten temat. To bardzo istotne kwestie dla liderów organizacji oraz firm, ale i&nbsp;dla rodziców oraz, miejmy nadzieję, również niektórych nastolatków. Warto znać zasady gry, zanim się wejdzie na boisko dorosłego życia. Autor stara się je w&nbsp;tej książce opisać i&nbsp;przybliżyć. z&nbsp;dobrym skutkiem!</div>
             <div class="who-says">
               <h2 class="h-blue">Paweł Tynel,</h2>
               <h2 class="h-blue">Partner, Członek Zarządu</h2>
