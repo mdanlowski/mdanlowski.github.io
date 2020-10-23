@@ -26,9 +26,12 @@ button.kj-button {
       background-color: #00C8A1;
       cursor: pointer; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   margin: 0 !important;
-  overflow-x: hidden; }
+  overflow-x: hidden !important; }
 
 .h-blue {
   color: #65C8B8; }
@@ -52,6 +55,8 @@ body {
   width: 100vw;
   height: 100vh;
   position: fixed;
+  top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 200; }
 
@@ -61,25 +66,27 @@ body {
   top: 0; }
   .menu * {
     font-family: "Poppins"; }
+  .menu a {
+    text-decoration: none !important; }
   .menu #menu-expanded {
-    transition: left .3s ease-in;
+    transition: right .15s ease-out;
     background-color: #65C8B8;
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 100%;
+    right: -100%;
     z-index: 10000;
     width: 560px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: start; }
-    .menu #menu-expanded .menu-button {
+    .menu #menu-expanded .menu-list-button {
       font-weight: bold;
       text-align: center;
       color: white;
       font-size: 30px;
       padding: 1em 2em; }
-      .menu #menu-expanded .menu-button:hover {
+      .menu #menu-expanded .menu-list-button:hover {
         background-color: #FFC000;
         cursor: pointer; }
   .menu #menu-button {
@@ -91,6 +98,11 @@ body {
     margin-right: 12px; }
     .menu #menu-button svg {
       max-height: 100%; }
+      .menu #menu-button svg g.open {
+        transition: opacity .15s; }
+      .menu #menu-button svg g.close {
+        opacity: 0;
+        transition: opacity .15s; }
     .menu #menu-button:hover {
       cursor: pointer;
       transform: scale(1.2);
@@ -109,29 +121,31 @@ body {
   height: 2em;
   background-position: right; }
 
-main #kompetencje-tytul {
-  padding: 5em 10em;
-  max-width: 424px; }
-  main #kompetencje-tytul .header-top h1 {
-    font-family: "Poppins";
-    font-weight: 800;
-    font-size: 55px !important;
-    text-transform: uppercase;
-    display: inline; }
-  main #kompetencje-tytul .header-top .book-icon {
-    width: 135px;
-    height: auto;
-    margin-top: -5em;
-    margin-bottom: -4em;
-    margin-left: 2em; }
-  main #kompetencje-tytul .header-bottom .subtitle-text {
-    padding-top: 1.5em;
-    padding-bottom: 2em;
-    max-width: 14em;
-    font-family: "Poppins";
-    font-weight: 200;
-    line-height: 36px;
-    font-size: 30px; }
+main {
+  max-width: 1680px !important; }
+  main #kompetencje-tytul {
+    padding: 5em 10em;
+    max-width: 424px; }
+    main #kompetencje-tytul .header-top h1 {
+      font-family: "Poppins";
+      font-weight: 800;
+      font-size: 55px !important;
+      text-transform: uppercase;
+      display: inline; }
+    main #kompetencje-tytul .header-top .book-icon {
+      width: 135px;
+      height: auto;
+      margin-top: -5em;
+      margin-bottom: -4em;
+      margin-left: 2em; }
+    main #kompetencje-tytul .header-bottom .subtitle-text {
+      padding-top: 1.5em;
+      padding-bottom: 2em;
+      max-width: 14em;
+      font-family: "Poppins";
+      font-weight: 200;
+      line-height: 36px;
+      font-size: 30px; }
 
 .section-title-centered-wrap .section-title {
   margin: auto; }
@@ -278,8 +292,9 @@ main #kompetencje-tytul {
   justify-content: space-around;
   align-items: center; }
   #co-sadza-inni .opinions {
-    width: 58%;
-    max-width: 1080px; }
+    width: 62%;
+    max-width: 1080px;
+    max-height: 1290px !important; }
     #co-sadza-inni .opinions .section-title-centered-wrap {
       padding-top: 4em;
       margin-top: 4em;
@@ -288,9 +303,11 @@ main #kompetencje-tytul {
 .opinion-opinionator-block {
   display: flex;
   flex-direction: row;
-  margin-bottom: 4em; }
+  margin-bottom: 1em; }
   .opinion-opinionator-block * {
     font-family: "Poppins"; }
+  .opinion-opinionator-block.opinion-inverse {
+    margin-bottom: 1em; }
   .opinion-opinionator-block .what-says, .opinion-opinionator-block .who-says {
     width: 460px;
     max-width: 50%;
@@ -308,7 +325,7 @@ main #kompetencje-tytul {
     text-align: center;
     font-size: 16px; }
   .opinion-opinionator-block .who-says {
-    padding-left: 25%;
+    padding-left: 15%;
     margin-right: -12%; }
     .opinion-opinionator-block .who-says h2 {
       margin: 0;
@@ -324,8 +341,13 @@ footer {
   justify-content: space-between; }
   footer * {
     font-family: "Poppins"; }
-  footer #prawa-autorskie div:last-child {
-    color: #363636 !important; }
+  footer #prawa-autorskie {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 1em; }
+    footer #prawa-autorskie div:last-child {
+      color: #363636 !important; }
   footer #ilustracje p {
     text-align: center !important; }
   footer #ilustracje .illustrator-signature {
@@ -375,6 +397,20 @@ footer {
 
   body > .menu > .menu-button {
     padding: 15px 15px; }
+
+  .menu #menu-expanded {
+    width: 100vw;
+    margin: unset !important;
+    background-color: #FFC000;
+    padding-top: 70px; }
+    .menu #menu-expanded .menu-list-button {
+      font-size: 12pt;
+      color: black; }
+  .menu #menu-button {
+    position: relative;
+    z-index: 15000;
+    margin-right: unset !important;
+    padding-right: 20px; }
 
   .main-background-section {
     background: none !important;
@@ -534,5 +570,8 @@ footer {
       max-width: 150px;
       height: auto;
       min-height: auto; } }
+@media only screen and (min-width: 1680px) {
+  main {
+    margin: auto !important; } }
 
 /*# sourceMappingURL=main.css.map */
