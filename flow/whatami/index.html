@@ -31,13 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
 function recur(obj) {
 	var result = {}, _tmp;
 	for (var i in obj) {
-		if(i=='bluetooth') debugger
 		if (i === 'enabledPlugin' || typeof obj[i] === 'function') {
 			continue;
 		} else if (typeof obj[i] === 'object') {
 			_tmp = recur(obj[i]);
 			if (Object.keys(_tmp).length) {
 				result[i] = _tmp;
+			} else {
+				result[i] = {}
 			}
 		} else {
 			result[i] = obj[i];
