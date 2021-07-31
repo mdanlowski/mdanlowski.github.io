@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
+
 <head>
 	<meta charset="utf-8">
 	<title>device inference</title>
@@ -7,45 +8,51 @@
 	<!-- <script type="text/javascript" src="script.js"></script> -->
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
+
 <body>
 	<main>
 		<h3 id="userAgent"></h3>
 		<h3 id="userPlatform"></h3>
 		<!-- <div> -->
-			<pre id="navi"></pre>
+		<pre id="batt"></pre>
+		<pre id="navi"></pre>
 		<!-- </div> -->
 	</main>
 </body>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-	var userAgent = window.navigator.userAgent,
-	userPlatform = clientInformation.platform,
-	navi = navigator
+	document.addEventListener('DOMContentLoaded', () => {
+		var userAgent = window.navigator.userAgent,
+			userPlatform = clientInformation.platform,
+			navi = navigator
 
-	document.querySelector('#userAgent').innerText = userAgent
-	document.querySelector('#userPlatform').innerText = userPlatform
-	document.querySelector('#navi').innerText = JSON.stringify(recur(navi), null, 2)
-})
+		document.querySelector('#userAgent').innerText = userAgent
+		document.querySelector('#userPlatform').innerText = userPlatform
+		document.querySelector('#navi').innerText = JSON.stringify(recur(navi), null, 2)
 
-function recur(obj) {
-	var result = {}, _tmp;
-	for (var i in obj) {
-		if (i === 'enabledPlugin' || typeof obj[i] === 'function') {
-			continue;
-		} else if (typeof obj[i] === 'object') {
-			_tmp = recur(obj[i]);
-			if (Object.keys(_tmp).length) {
-				result[i] = _tmp;
+		navigator.getBattery().then((data) => {
+			document.querySelector('#batt').innerText = JSON.stringify(recur(data), null, 2)
+		}).catch(() => {})
+	})
+
+	function recur(obj) {
+		var result = {}, _tmp;
+		for (var i in obj) {
+			if (i === 'enabledPlugin' || typeof obj[i] === 'function') {
+				continue;
+			} else if (typeof obj[i] === 'object') {
+				_tmp = recur(obj[i]);
+				if (Object.keys(_tmp).length) {
+					result[i] = _tmp;
+				} else {
+					result[i] = {}
+				}
 			} else {
-				result[i] = {}
+				result[i] = obj[i];
 			}
-		} else {
-			result[i] = obj[i];
 		}
+		return result;
 	}
-	return result;
-}
 </script>
 
 </html>
